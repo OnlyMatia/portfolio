@@ -48,11 +48,11 @@ export default function Navbar(){
         initial={{y: '-100%', opacity: 0}}           
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay: 0.7}}
-        className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5  `} >           {/* ${isOpen ? "" : "mix-blend-difference" } bug prolaze efekti kada se klikne da se zatvori*/}
-            <div className="container mx-auto flex items-center justify-between px-2.5 p-5">
+        className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5 `} >           {/* ${isOpen ? "" : "mix-blend-difference" } bug prolaze efekti kada se klikne da se zatvori*/}
+            <div className="container mx-auto flex items-center justify-between px-2.5 p-5 ">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
                     <h1>
-                        <a href="/" className="cursor-pointer flex flex-col md:flex-row">
+                        <a href="/" className="cursor-pointer flex flex-col md:flex-row ">
                         <span className={piazzolla.className}>Matija</span>
                         <span className={pixelify.className}>Šajin</span>
                         </a>

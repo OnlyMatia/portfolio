@@ -3,16 +3,14 @@ import localFont from "next/font/local";
 import {  useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
-
 const steps = [
-    {step: "Research", desc: "Before starting development, I analyze the target audience, study competitors, and determine key SEO factors. This helps build a solid foundation for the project."},
-    {step: "Design", desc: "Based on the research, I create wireframes and prototypes to define the website's structure and appearance in Figma. My focus is on new and modern UI design."},
-    {step: "Development", desc: "Turning the design into a fully functional website. The frontend handles the visual part such as animations, while the backend manages data, logic, and integrations."},
-    {step: "Testing", desc: "Testing the website to ensure it works correctly across all devices and browsers. I fix bugs, speed up the performance, and enhance the user experience."},
-    {step: "Optimization", desc: "Improving loading speed, security, and SEO while ensuring the site is responsive, fast and mobile-friendly."},
-    {step: "Launch", desc: "Once everything is tested and optimized, I deploy the website and monitor its performance to ensure smooth operation on Vercel or other hosting platform."},
+    {step: "Research", desc: "Most important step before design and development is analyzing the target audience, study competitors, and determine key SEO factors. This helps build a solid foundation for the project."},
+    {step: "Design", desc: "Based on the research, I create initial designs and prototypes to define the website's structure and appearance in Figma, focusing on new and modern UI design."},
+    {step: "Development", desc: "After the design is approved I go into developing a fully functional website. The frontend handles the visual part such as animations, while the backend manages data and logic."},
+    {step: "Testing", desc: "Testing is one of the most important steps of building websites to ensure it works correctly across all devices and browsers. Fixing bugs, speed up the performance, and enhance the user experience."},
+    {step: "Optimization", desc: "Improving loading speed, security, and SEO with right words/keywords while ensuring the site is responsive, fast and mobile-friendly."},
+    {step: "Launch", desc: "Once everything is tested and optimized, I deploy the website and monitor its performance to ensure smooth operation on Vercel or hosting platform of choice."},
 ];
-
 
 const pixelify = localFont({
     src: "../fonts/Pixelify_sans.ttf",
@@ -26,7 +24,6 @@ export default function Work () {
     const toggleStep = (index: number) => {
         setOpenIndex(openIndex === index ? null : index)
     }
-
 
     return (
         <section className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden"  >

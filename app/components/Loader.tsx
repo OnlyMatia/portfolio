@@ -10,7 +10,7 @@ export default function Loader() {
         const timeout = setTimeout(() => {
             controls.start({
                 y: "-100%", 
-                transition: { duration: 0.3 }
+                transition: { duration: 0.5 }
             })
         }, 300) 
 
@@ -27,7 +27,7 @@ export default function Loader() {
                 className="w-16 h-16 border-t-3 border-b-2 border-white rounded-full animate-spin"
                 initial={{ rotate: 0 }}
                 animate={{ rotate: 360 }}
-                transition={{ duration: 0.2, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 0.3, repeat: Infinity, ease: "linear" }}
             />
         </motion.section>
     )
