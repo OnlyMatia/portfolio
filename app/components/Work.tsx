@@ -1,7 +1,7 @@
 'use client'
 import localFont from "next/font/local";
-import {  useState } from "react"
-import { motion } from "framer-motion"
+import {  useRef, useState } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 
 const steps = [
@@ -27,19 +27,32 @@ export default function Work () {
         setOpenIndex(openIndex === index ? null : index)
     }
 
+
     return (
-        <section className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7">
+        <section className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden"  >
             <div  className={`text-4xl md:text-5xl font-bold pb-10 ${pixelify.className} `}>
                 <h2>How I work </h2>
             </div>
 
             {steps.map((el, i) => {
+                const ref = useRef(null)
+                const { scrollYProgress } = useScroll({
+                    target: ref,
+                    offset: ['start 100%', 'start 70%'], 
+                });
+                const opacity = useTransform(scrollYProgress, [0, 1], [0, 1])
+                const xNum = useTransform(scrollYProgress, [0, 1], ["-200px", "0px"])
+                const xTxt = useTransform(scrollYProgress, [0, 1], ["200px", "0px"])
+
                 return (
-                    <div className="space-y-5 w-full"  key={i} onClick={() => toggleStep(i)} >
-                        <div className="flex flex-col w-full border-b-1 cursor-pointer ">
+                    <div className="space-y-5 w-full"  key={i} onClick={() => toggleStep(i)} ref={ref} >
+                        <motion.div className="flex flex-col w-full border-b-1 cursor-pointer " style={{opacity}}>
                             <div className={`flex justify-between py-2 text-3xl ${pixelify.className}`} >
-                                <span>{"0" + (i+1)}</span>
-                                <div className="flex gap-5">
+                                <motion.span style={{x: xNum}}>
+                                    {"0" + (i+1)}
+                                </motion.span>
+
+                                <motion.div className="flex gap-5" style={{x:xTxt}}>
                                     <span>{el.step}</span>
                                     <motion.img 
                                             src="/arrow.svg" 
@@ -48,8 +61,9 @@ export default function Work () {
                                             animate={{ rotate: openIndex === i ? 180 : 0 }}
                                             transition={{ duration: 0.3 }}
                                         />
-                                </div>
+                                </motion.div>
                             </div>
+
                             <motion.div
                                     className="text-right text-lg w-full flex justify-end overflow-hidden"
                                     initial={{ height: 0, opacity: 0 }}
@@ -58,7 +72,7 @@ export default function Work () {
                                 >
                                     <p className="w-full md:w-3/4">{el.desc}</p>
                             </motion.div>
-                        </div>
+                        </motion.div>
                     </div>
                 )
             })}
