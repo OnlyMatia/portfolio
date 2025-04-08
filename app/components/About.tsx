@@ -29,7 +29,7 @@ export default function About () {
                     <motion.span className="block h-[1px] bg-white "  style={{ width: customWidth }}></motion.span>
                 </div>
                 <div className={`text-xl block md:text-2xl font-semibold w-5/6 leading-[1.4] text-[#d7d7d7] z-10` }>
-                    <Loading value={"Hey, I'm a 24-year-old web developer working with modern full stack technologies, cool animations, video and photo editing. Currently working on a few interesting projects as a freelancer but I'm always open for more. "} />
+                    <Loading value={"Hey, I'm a 24-year-old web developer working with modern full stack technologies, cool and creative animations, 3D and video and photo editing. Currently working on a few interesting projects as a freelancer but I'm always open for more. "} />
 
                 </div>
             </div>
