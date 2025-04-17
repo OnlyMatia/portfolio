@@ -17,7 +17,7 @@ export default function Header () {
   const [gif, setGif] = useState(false)
 
     return (
-        <header className="flex flex-col h-screen items-center justify-between w-full cursor-default">
+        <header className=" flex flex-col h-screen items-center justify-between w-full cursor-default">
         
         <section className="flex flex-col justify-center items-center flex-grow text-center pt-20 h-min">
           <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold flex space-x-5 md:flex-row flex-col ">
@@ -93,7 +93,7 @@ export default function Header () {
             setGif(false)
           }}
           className="relative w-[300px] h-[160px]">
-            <span>{!gif ? "Hello there, I'm Matija" : "I'm Matija 🤧"}</span>
+            <span>Hello there, I'm Matija</span>
             <Image 
             unoptimized
             src={gif ? "/spider.gif" : "/gif.gif" }

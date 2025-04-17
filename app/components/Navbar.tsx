@@ -51,12 +51,12 @@ export default function Navbar(){
         className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5 `} >           {/* ${isOpen ? "" : "mix-blend-difference" } bug prolaze efekti kada se klikne da se zatvori*/}
             <div className="container mx-auto flex items-center justify-between px-2.5 p-5 ">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
-                    <h1>
+                    <div>
                         <a href="/" className="cursor-pointer flex flex-col md:flex-row ">
                         <span className={piazzolla.className}>Matija</span>
                         <span className={pixelify.className}>Šajin</span>
                         </a>
-                    </h1>
+                    </div>
                 </div>
 
                 <a href={mobileAnimation ? undefined : "mailto:sajin.matija@gmail.com"} onMouseEnter={() => sethover(true)} onMouseLeave={() => sethover(false)} onClick={mobileAnimation ? animateClick : undefined}>
@@ -82,14 +82,14 @@ export default function Navbar(){
             <AnimatePresence>
             {isOpen && (
                 <motion.div 
-                className={`absolute top-0 left-0 w-full bg-[#101010] min-h-screen flex flex-col justify-between pt-35 z-40  `}
+                className={`absolute top-0 left-0 w-full bg-[#101010] min-h-screen flex flex-col justify-center  z-40  `}
                 key="fade-box"
                 initial={{ y: "-100%"}}
                 animate={{ y: 0}}
                 exit={{y: "-100%", transition: { duration: 0.3, delay: 0.4}}}
                 transition={{duration: 0.3}}
                 >
-                    <ul className="px-10 sm:px-15 sm:py-0 space-y-15 md:space-y-10  flex flex-col justify-center">
+                    <ul className="px-10 sm:px-15 sm:py-0 space-y-15 md:space-y-10 flex flex-col justify-center">
                         {links.map((item, i) => (
                             <motion.li key={i}
                             initial={{opacity: 0, y: 10}}
@@ -113,10 +113,10 @@ export default function Navbar(){
                         ))}
                     </ul>
                     
-                    <ul className="flex justify-center gap-10 px-3 py-10 font-bold ">
+                    <ul className="fixed bottom-0 flex justify-center left-0 gap-10 px-3 py-10 font-bold w-full">
                         {[{name:"Instagram", link:"https://www.instagram.com/matiasajin/"}, {name:"GitHub", link:"https://github.com/OnlyMatia"}, {name:"LinkedIn", link:"https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/"}].map((item, i) => (
                             <motion.li key={i} 
-                            className="text-xl uppercase"
+                            className="sm:text-xl uppercase"
                             initial={{opacity: 0, y: 10}}
                             animate={{opacity:1, y:0 }}
                             exit={{

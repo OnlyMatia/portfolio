@@ -18,7 +18,8 @@ interface ProjectProps {
 
 export default function Labs () {
     return (
-        <section className="min-h-screen w-full p-5">
+        <section className="min-h-screen w-full pt-20 p-3">
+            <h3 className={`text-4xl text-center ${pixelify.className}`}>Work I did</h3>
             {projects.map((project, i) => {
                 return (
                     <Project key={i} index={i} {...project} />
@@ -37,8 +38,8 @@ function Project({title, desc, tech, image, color, index}:ProjectProps) {
 
                 <div className="p-8 sm:p-10 w-full md:w-1/2 flex flex-col justify-between gap-5">
                     <div className="text-[#1e1e1e] space-y-5">
-                        <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold ${pixelify.className}`}>{title}</h2>
-                        <p>{desc}</p>
+                        <h2 className={`text-3xl md:text-4xl  font-bold ${pixelify.className}`}>{title}</h2>
+                        <p className="text-sm sm:text-normal">{desc}</p>
                     </div>
                     <div className="flex gap-2 flex-wrap ">
                         {tech.map((el, i) => {

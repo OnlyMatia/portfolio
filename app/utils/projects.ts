@@ -22,7 +22,7 @@ export const projects = [
     }, {
         title: "Future Projects.", 
         desc: "In development...", 
-        tech: ["NextJS", "Figma", "PostgreSQL", ], 
+        tech: ["NextJS", "Figma", "PostgreSQL", "WordPress" ], 
         image: "", 
         color: "#fd7807"
     },

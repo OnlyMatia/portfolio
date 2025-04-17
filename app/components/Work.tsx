@@ -28,7 +28,7 @@ export default function Work () {
     return (
         <section className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden"  >
             <div  className={`text-4xl md:text-5xl font-bold pb-10 ${pixelify.className} `}>
-                <h2>How I work </h2>
+                <h2>Steps for a perfect website </h2>
             </div>
 
             {steps.map((el, i) => {
