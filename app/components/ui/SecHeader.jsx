@@ -18,6 +18,8 @@ export default function SecHeader () {
                 <a href="https://xtwo.dev" className="font-bold w-fit">
                     <span className="relative inline-block overflow-hidden group">
                     Explore my favorite studio.
+                    <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
+
                     </span>
                 </a>
                 </div>

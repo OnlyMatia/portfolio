@@ -50,8 +50,8 @@ export default function Loader() {
         <motion.section 
         initial={{ y: 0 }}
         animate={controls}
-        className="fixed h-[100dvh] bg-[#101010] z-60 w-full flex justify-between flex-col p-5 md:p-15 ">
-            <div className="text-6xl md:text-9xl font-bold overflow-hidden">
+        className="fixed h-[100dvh] bg-[#101010] z-60 w-full flex justify-between flex-col md:p-15 ">
+            <div className="text-6xl md:text-9xl font-bold overflow-hidden p-2">
                 <motion.h2
                 className="relative inline-block"
                 variants={container}
@@ -70,7 +70,7 @@ export default function Loader() {
                 </motion.h2>
             </div>
         
-            <div className={`${pixelify.className} w-full justify-end font-bold text-8xl md:text-9xl flex flex-row overflow-hidden `}>
+            <div className={`w-full justify-end text-8xl md:text-9xl flex flex-row overflow-hidden `}>
                 <Counter duration={0.5} />
             </div>
 

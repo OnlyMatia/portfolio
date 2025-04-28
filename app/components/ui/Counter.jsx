@@ -25,7 +25,7 @@ export default function Counter({ duration = 1 } ) {
     }, [count, rounded, duration]);
 
     return (
-        <div className={` w-full justify-end font-bold text-8xl md:text-9xl flex flex-row overflow-hidden`}>
+        <div className={` w-full justify-end font-black text-8xl md:text-9xl flex flex-row overflow-hidden`}>
             <span>{displayValue}%</span>
         </div>
     );

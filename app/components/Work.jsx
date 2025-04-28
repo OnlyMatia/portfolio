@@ -44,12 +44,12 @@ export default function Work () {
                 return (
                     <div className="space-y-5 w-full"  key={i} onClick={() => toggleStep(i)} ref={ref} >
                         <motion.div className="flex flex-col w-full border-b-1 cursor-pointer " style={{opacity}}>
-                            <div className={`flex justify-between py-2 text-3xl ${pixelify.className}`} >
+                            <div className={`flex justify-between py-2 text-3xl font-bold `} >
                                 <motion.span style={{x: xNum}}>
                                     {"0" + (i+1)}
                                 </motion.span>
 
-                                <motion.div className="flex gap-5" style={{x:xTxt}}>
+                                <motion.div className="flex gap-2 md:gap-5" style={{x:xTxt}}>
                                     <span>{el.step}</span>
                                     <motion.img 
                                             src="/arrow.svg" 

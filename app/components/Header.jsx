@@ -34,7 +34,7 @@ export default function Header () {
                 <Zoop text="Developer" autoAnimate />
             </motion.span>
             </h1>
-            <h3 className=" font-bold mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center ">
+            <h3 className="  mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center text-[#ffffffd2]">
             {"Specializing in frontend development using modern technologies and designs".split(" ").map((el, i) => {
                 return (
                 <motion.span key={i}
@@ -56,7 +56,10 @@ export default function Header () {
                     initial={{y: '-100%', opacity: 0}}           
                     animate={{y: 0, opacity: 1}}
                     transition={{duration: 0.6, delay: LoaderDelay+ (0.05 * i)}}>
-                    <Zoop text={el.name} href={el.link} />
+                        <a href={el.link} className="group">
+                            {el.name}
+                            <span className="h-[1px] w-0 bg-white block group-hover:w-full ease-in duration-200 rounded-full" />
+                        </a>
                     </motion.div>
                 )
                 })}
@@ -89,8 +92,11 @@ export default function Header () {
             </motion.div>
 
             <motion.div 
-            initial={{x: '100%', opacity: 0}}
-            animate={{x: 0, opacity: 1}}
+            // initial={{x: '100%', opacity: 0}}
+            // animate={{x: 0, opacity: 1}}
+            // transition={{duration:0.6, delay: LoaderDelay}}
+            initial={{scale:0,rotate:40}}
+            animate={{scale:1,rotate:0}}
             transition={{duration:0.6, delay: LoaderDelay}}
             className="flex items-end ">
 
