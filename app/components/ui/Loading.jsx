@@ -30,7 +30,7 @@ const Word = ({children, range, progress}) => {
     const amount = range[1] - range[0]
     const step = amount / char.length
     return (
-        <span className=" mr-2">
+        <span className=" mr-1">
             {
                 char.map((el, i) => {
                     const start = range[0] + (step * i)
@@ -46,7 +46,7 @@ const Char = ({children, range, progress} ) =>{
     const opacity = useTransform(progress, range, [0,1])
 
     return (
-        <span className="relative customZ">
+        <span className="relative">
             <span className="absolute opacity-[0.1]">{children}</span>
             <motion.span style={{opacity}}>
             {children}
