@@ -1,4 +1,6 @@
+"use client"
 
+import { useState } from "react";
 import About from "./components/About";
 import ContactAction from "./components/ContactAction";
 import Footer from "./components/Footer";
@@ -12,11 +14,11 @@ import Work from "./components/Work";
 
 
 export default function Page() {
-
+  const [hovered, setHovered] = useState(false);
 
   return (
     <main className="items-center justify-items-center gap-16 ">
-      <Mouse />
+      <Mouse hovered={hovered}/>
       
       <Loader /> 
       <Navbar />     
@@ -24,7 +26,7 @@ export default function Page() {
       <SecHeader />
       <About />
       
-      <Labs />
+      <Labs setHovered={setHovered} />
       <Work />
       <ContactAction />
       <Footer />

@@ -1,7 +1,7 @@
 'use client'
 import localFont from "next/font/local";
 import {  useRef, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useInView, useScroll, useTransform } from "framer-motion"
 
 const steps = [
     {step: "Research", desc: "Most important step before design and development is analyzing the target audience, study competitors, and determine key SEO factors. This helps build a solid foundation for the project."},
@@ -20,6 +20,11 @@ const pixelify = localFont({
 
 export default function Work () {
     const [openIndex, setOpenIndex] = useState()
+    const refTitle= useRef(null)
+    const isInView = useInView(refTitle, {
+        once:false, 
+        margin: "0px 0px -20% 0px"
+    })
 
     const toggleStep = (index) => {
         setOpenIndex(openIndex === index ? null : index)
@@ -27,8 +32,15 @@ export default function Work () {
 
     return (
         <section id="work" className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden"  >
-            <div  className={`text-4xl md:text-5xl font-black capitalize pb-10  `}>
-                <h2>How I work on projects</h2>
+            <div  className={`text-4xl md:text-5xl font-black capitalize overflow-hidden mb-20`}>
+            <motion.h2 
+                ref={refTitle}
+                initial={{y: "100%"}}
+                animate={isInView ? {y:-5} : {}}
+                transition={{duration: 0.5, ease: "easeOut"}}
+                >
+                    How I Work on projects
+                </motion.h2>
             </div>
 
             {steps.map((el, i) => {
