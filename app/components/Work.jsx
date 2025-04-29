@@ -22,7 +22,7 @@ export default function Work () {
     const [openIndex, setOpenIndex] = useState()
     const refTitle= useRef(null)
     const isInView = useInView(refTitle, {
-        once:false, 
+        once:true, 
         margin: "0px 0px -20% 0px"
     })
 

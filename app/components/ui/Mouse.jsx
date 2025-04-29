@@ -20,7 +20,7 @@ export default function Mouse ({hovered}) {
 
     return (
         <div
-        className={` w-2 h-2 rounded-full bg-white fixed pointer-events-none z-10 transition-transform duration-100 ease-out flex justify-center items-center text-black ${!hovered && "mix-blend-difference" }`}
+        className={` w-2 h-2 rounded-full bg-white fixed pointer-events-none z-10 transition-transform duration-100 ease-out flex justify-center items-center text-black mix-blend-difference`}
         style={{
         transform: `translate(${position.x - size / 2}px, ${position.y - size / 2}px)`,
         width: `${size}px`,
