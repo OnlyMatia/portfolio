@@ -1,10 +1,12 @@
 "use client"
 import { useEffect, useState } from "react"
+import { useTheme } from "../ThemeContext"
 
 
-export default function Button ({text, link} ) {
+export default function Button ({text, link, onClick} ) {
     const [hover, sethover] = useState(false)
     const [mobileAnimation, setMobileAnimation] = useState(false)
+    const {bgColor, txtColor} = useTheme()
 
     useEffect(() => {
             const handleResize = () => {
@@ -17,17 +19,21 @@ export default function Button ({text, link} ) {
 
     function animateClick () {
         sethover(true)
+        
         setTimeout(() => {
             sethover(false)
-            window.open('mailto:sajin.matija@gmail.com', '_blank')
+            if(onClick) onClick()
         }, 300);
     }
 
     return (
-        <a href={mobileAnimation ? undefined : link} onMouseEnter={() => sethover(true)} onMouseLeave={() => sethover(false)} onClick={mobileAnimation ? animateClick : undefined}>
+        <a href={mobileAnimation ? undefined : link} 
+        onMouseEnter={() => sethover(true)} 
+        onMouseLeave={() => sethover(false)} 
+        onClick={mobileAnimation ? animateClick : onClick}>
             <button className="border-1 rounded-3xl py-2 px-3  cursor-pointer md:px-6 md:py-1 lg:px-7 relative flex items-center justify-center overflow-hidden ">
-                <div className={`absolute rounded-full transition-all duration-800 ease-in-out  bg-white ${hover ? "w-2 h-2 scale-[100] " : "w-0 h-0 " } `}></div>
-                <span className={`relative z-10 transition-colors  ${hover ? "text-[#1e1e1e]" : "text-white"}`}>
+                <div className={`absolute rounded-full transition-all duration-700 ease-in-out ${hover ? "w-2 h-2 scale-[100] " : "w-0 h-0 " } `} style={{background:txtColor}}></div>
+                <span className={`relative z-10 transition-colors`} style={hover ? {color:bgColor} : {color:txtColor}}>
                     {text}
                 </span>
             </button>

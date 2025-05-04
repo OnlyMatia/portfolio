@@ -3,8 +3,10 @@
 import { useRef } from "react"
 import { projects } from "../utils/projects"
 import { motion, useInView } from "framer-motion"
+import { useTheme } from "./ThemeContext"
 
 export default function Labs ({ setHovered }) {
+    const {bgColor, txtColor} = useTheme()
     const titleRef = useRef(null)
     const isInView = useInView(titleRef, {
         once:true,
@@ -12,7 +14,7 @@ export default function Labs ({ setHovered }) {
     })
 
     return (
-        <section id="labs" className="min-h-screen w-full p-3 md:p-0">
+        <section id="labs" className="min-h-screen w-full p-3 md:p-0" style={{background:bgColor, color:txtColor}}>
             <div
             className={`text-4xl font-bold uppercase text-center overflow-hidden`}>
 

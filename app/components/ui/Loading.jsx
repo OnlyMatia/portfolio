@@ -14,7 +14,7 @@ export default function Loading ({value} ) {
     return (
         <p
         ref={element}
-        className="flex flex-wrap w-full "
+        className="flex flex-wrap w-full relative"
         >
             {words.map((word, i) => {
                 const start = i / words.length
@@ -30,7 +30,7 @@ const Word = ({children, range, progress}) => {
     const amount = range[1] - range[0]
     const step = amount / char.length
     return (
-        <span className=" mr-1">
+        <span className=" mr-[3px]">
             {
                 char.map((el, i) => {
                     const start = range[0] + (step * i)

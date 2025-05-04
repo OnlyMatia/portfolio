@@ -2,6 +2,7 @@
 import Zoop from "./ui/Zoop";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
+import { useTheme } from "./ThemeContext";
 
 const pixelify = localFont({
     src: "../fonts/Pixelify_sans.ttf",
@@ -13,9 +14,11 @@ const pixelify = localFont({
 const LoaderDelay = 0.8
 
 export default function Header () {
+    const {bgColor, txtColor} = useTheme()
 
     return (
-        <header id="header" className=" flex flex-col min-h-[100dvh] items-center justify-center w-full cursor-default md:gap-10">
+        <header id="header" className={` flex flex-col min-h-[100dvh] items-center justify-center w-full cursor-default md:gap-10`} 
+        style={{background: bgColor, color: txtColor}}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold flex space-x-5 md:flex-row flex-col ">
@@ -23,7 +26,7 @@ export default function Header () {
             initial={{y: '-100%', opacity: 0}}           
             animate={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 0.85}}
-            className={pixelify.className}>
+            className={`${pixelify.className}`}>
                 <Zoop text="WEB" autoAnimate />
             </motion.span>
 
@@ -34,7 +37,7 @@ export default function Header () {
                 <Zoop text="Developer" autoAnimate />
             </motion.span>
             </h1>
-            <h3 className="  mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center text-[#ffffffd2]">
+            <h3 className={`mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center text-[${txtColor}]`}>
             {"Specializing in frontend development using modern technologies and designs".split(" ").map((el, i) => {
                 return (
                 <motion.span key={i}
@@ -58,7 +61,7 @@ export default function Header () {
                     transition={{duration: 0.6, delay: LoaderDelay+ (0.05 * i)}}>
                         <a href={el.link} className="group">
                             {el.name}
-                            <span className="h-[1px] w-0 bg-white block group-hover:w-full ease-in duration-200 rounded-full" />
+                            <span className={`h-[1px] w-0  block group-hover:w-full ease-in duration-200 rounded-full`} style={{backgroundColor: txtColor}} />
                         </a>
                     </motion.div>
                 )
@@ -74,7 +77,7 @@ export default function Header () {
             transition={{duration:0.6, delay: LoaderDelay}}
             className="hidden md:block">
                 
-                <div className="max-w-[280px] flex flex-col gap-5 text-[#ffffffe5]">
+                <div className={`max-w-[280px] flex flex-col gap-5 text-[${txtColor}]`}>
                 <div className="text-4xl capitalize">
                     <h3 className="border-t border-b py-1 ">Front-end</h3>
                     <h3 className="border-b py-1">Developer &</h3>
@@ -84,7 +87,7 @@ export default function Header () {
                 <a href="https://xtwo.dev" className="font-bold w-fit">
                     <span className="relative inline-block overflow-hidden group">
                     Explore my favorite studio.
-                    <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}></span>
                     </span>
                 </a>
                 </div>
@@ -92,9 +95,6 @@ export default function Header () {
             </motion.div>
 
             <motion.div 
-            // initial={{x: '100%', opacity: 0}}
-            // animate={{x: 0, opacity: 1}}
-            // transition={{duration:0.6, delay: LoaderDelay}}
             initial={{scale:0,rotate:40}}
             animate={{scale:1,rotate:0}}
             transition={{duration:0.6, delay: LoaderDelay}}
@@ -102,7 +102,7 @@ export default function Header () {
 
                 
                 <div className="w-[300px]">
-                <p className="text-sm text-[#ffffff9d]">Whats up, I'm Matija</p>
+                <p className={`text-sm text-[${txtColor}]`}>Whats up, I'm Matija</p>
                 <video autoPlay loop muted playsInline className="object-cover" >
                     <source src="/wazap.mp4" type="video/mp4" />
                 </video>

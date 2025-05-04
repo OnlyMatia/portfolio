@@ -2,6 +2,7 @@
 import localFont from "next/font/local";
 import {  useRef, useState } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
+import { useTheme } from "./ThemeContext";
 
 const steps = [
     {step: "Research", desc: "Most important step before design and development is analyzing the target audience, study competitors, and determine key SEO factors. This helps build a solid foundation for the project."},
@@ -19,6 +20,7 @@ const pixelify = localFont({
 });
 
 export default function Work () {
+    const {bgColor, txtColor} = useTheme()
     const [openIndex, setOpenIndex] = useState()
     const refTitle= useRef(null)
     const isInView = useInView(refTitle, {
@@ -31,15 +33,16 @@ export default function Work () {
     }
 
     return (
-        <section id="work" className="min-h-screen w-full flex flex-col justify-center items-start p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden"  >
-            <div  className={`text-4xl md:text-5xl font-black capitalize overflow-hidden mb-20`}>
+        <section id="work" className="min-h-screen w-full flex flex-col justify-center p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden" 
+        style={{background:bgColor, color:txtColor}} >
+            <div  className={`text-4xl md:text-5xl font-black capitalize overflow-hidden mb-20 text-center`}>
             <motion.h2 
                 ref={refTitle}
                 initial={{y: "100%"}}
                 animate={isInView ? {y:-5} : {}}
                 transition={{duration: 0.5, ease: "easeOut"}}
                 >
-                    How I Work on projects
+                    Steps to perfection
                 </motion.h2>
             </div>
 
@@ -54,8 +57,8 @@ export default function Work () {
                 const xTxt = useTransform(scrollYProgress, [0, 1], ["200px", "0px"])
 
                 return (
-                    <div className="space-y-5 w-full"  key={i} onClick={() => toggleStep(i)} ref={ref} >
-                        <motion.div className="flex flex-col w-full border-b-1 cursor-pointer " style={{opacity}}>
+                    <div className="space-y-5 w-full flex justify-center"  key={i} onClick={() => toggleStep(i)} ref={ref} >
+                        <motion.div className="flex flex-col w-full border-b-1 cursor-pointer max-w-7xl" style={{opacity}}>
                             <div className={`flex justify-between py-2 text-3xl font-bold `} >
                                 <motion.span style={{x: xNum}}>
                                     {"0" + (i+1)}
@@ -67,6 +70,7 @@ export default function Work () {
                                             src="/arrow.svg" 
                                             alt="arrow" 
                                             className="w-7"
+                                            style={{ color: txtColor }}
                                             animate={{ rotate: openIndex === i ? 180 : 0 }}
                                             transition={{ duration: 0.3 }}
                                         />

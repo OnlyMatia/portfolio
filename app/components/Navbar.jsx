@@ -5,6 +5,7 @@ import { motion, AnimatePresence,  } from "framer-motion"
 import localFont from "next/font/local";
 import Zoop from "./ui/Zoop"
 import Button from "./ui/Button";
+import { useTheme } from "./ThemeContext";
 
 const piazzolla = localFont({
     src: "../fonts/piazzolla.ttf",
@@ -19,18 +20,18 @@ const pixelify = localFont({
 });
 
 
-export default function Navbar(){
+export default function Navbar({changeColor}){
     const [isOpen, setIsOpen] = useState(false)
     const [fade, setFade] = useState(false)
     const links = [{name:"home", link:"#header"}, {name:"about", link:"#about"}, {name:"work", link:"#labs"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
-
+    const {bgColor, txtColor} = useTheme()
 
     return (
         <motion.nav
         initial={{y: '-100%', opacity: 0}}           
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay: 1}}
-        className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5 md:p-10 `} >           {/* ${isOpen ? "" : "mix-blend-difference" } bug prolaze efekti kada se klikne da se zatvori*/}
+        className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5 md:p-10 `} style={isOpen ? {color:bgColor} : {color:txtColor}}>           
             <div className="container mx-auto flex items-center justify-between  ">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
                     <div>
@@ -41,7 +42,9 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <Button text="Contact" link="mailto:sajin.matija@gmail.com" />
+                
+                <Button text="Mix" onClick={changeColor} />
+                
 
                 <div className="flex justify-end flex-1"><button
                     className="flex flex-col justify-center gap-1.5 py-3 px-auto rounded z-50 cursor-pointer "
@@ -49,15 +52,16 @@ export default function Navbar(){
                         setFade(!fade) 
                         setIsOpen(!isOpen)}}
                 >
-                    <span className={`block w-12 h-0.5 bg-white rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`}></span>
-                    <span className={`block w-12 h-0.5 bg-white rounded transition-transform duration-200 ease-in-out ${isOpen ? "-rotate-45 -translate-y-1" : ""}`}></span>
+                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`} style={isOpen ? {background:bgColor} : {background:txtColor}}></span>
+                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} style={isOpen ? {background:bgColor} : {background:txtColor}}></span>
                 </button></div>
             </div>
 
             <AnimatePresence>
             {isOpen && (
                 <motion.div 
-                className={` absolute top-0 left-0 w-full bg-[#101010] min-h-screen flex flex-col justify-center items-center z-40  `}
+                className={` absolute top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center z-40  `}
+                style={{background:txtColor, color:bgColor}}
                 key="fade-box"
                 initial={{ y: "-100%"}}
                 animate={{ y: 0}}
@@ -78,7 +82,7 @@ export default function Navbar(){
                                 duration: 0.3,
                                 delay: (i + 4) * 0.1,
                             }}
-                            className="w-full inline-block border-b-[1px] text-white hover:text-[#797979]"
+                            className="w-full inline-block border-b-[1px]"
                             >
                                 <a href={item.link} className="flex justify-between cursor-pointer text-5xl sm:text-6xl font-bold md:text-7xl uppercase">
                                     <h2>{item.name}</h2>

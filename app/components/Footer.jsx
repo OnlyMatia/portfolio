@@ -1,18 +1,44 @@
 import Image from "next/image";
+import { useTheme } from "./ThemeContext";
 
 
 export default function Footer (){
-
+    const {bgColor, txtColor, hoverColor} = useTheme()
 
     return (
-        <footer className="bottom-0 w-full bg-[#101010] overflow-hidden h-auto flex justify-center">
+        <footer className="bottom-0 w-full  overflow-hidden h-auto flex justify-center" style={{background:bgColor, color:txtColor}}>
             <div className="flex flex-col justify-center gap-2 w-full">
                 
-                <ul className="flex flex-col md:flex-row gap-5 justify-around pt-5 border-t px-3 text-[#ffffff6e] mt-10 ml-10 mr-10 text-xs md:text-base ">
-                    <li >Feel free to contact me for a<br/>  project you have in mind. <a href="mailto:sajin.matija@gmail.com" className="hover:text-[#ffffffd5]">Email</a></li>
-                    <li><span className="hover:text-[#ffffffd5] cursor-pointer">LinkedIn</span><br/> <span className="hover:text-[#ffffffd5] cursor-pointer">GitHub</span></li>
-                    <li>I also help out here :d <br /><a href="xtwo.dev" className="hover:text-[#ffffffd5] cursor-pointer">Explore xTwo.dev</a></li>
-                    <li>Designed & <br/> Developed by:</li>
+                <ul className="flex flex-col md:flex-row gap-5 justify-around pt-5 border-t px-3  mt-10 ml-10 mr-10 text-xs md:text-base ">
+                    <li >
+                        Feel free to contact me for a <br/>
+                        project you have in mind. 
+                        <a href="mailto:sajin.matija@gmail.com" >
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <span className=" cursor-pointer">
+                            LinkedIn
+                        </span>
+
+                        <br/> 
+                        <span className=" cursor-pointer">
+                            GitHub
+                        </span>
+                    </li>
+                    <li>
+                        I also help out here :d 
+                        <br />
+                        <a href="xtwo.dev" className=" cursor-pointer">
+                            Explore xTwo.dev
+                        </a>
+                    </li>
+                    <li>
+                        Designed & 
+                        <br/> 
+                        Developed by:
+                    </li>
                 </ul>
                 
                 <div className="w-full flex justify-center ">
