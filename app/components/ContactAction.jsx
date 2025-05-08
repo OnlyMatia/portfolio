@@ -23,16 +23,16 @@ export default function ContactAction () {
             </div>
             <div className=" flex flex-row  ">
                 <div className="w-1/2  flex flex-col justify-between items-start gap-5">
-                    <p className="w-[90%] md:w-[80%] lg:w-[70%] text-[12px]  sm:text-sm md:text-sm lg:text-base  ">
-                    Whether you're launching a new business, building your personal brand, or simply looking to refresh your website, I'm here to help. Feel free to drop me a line about your idea or a project you have in mind.
-                    We'll grab a coffee or a beer, discuss the idea and turn your vision into a fully functional website that not only looks great but also delivers real results.
-                    I work closely with each client to understand their goals and provide a custom design tailored for their needs — from initial concept to final launch.
+                    <p className="w-[90%] md:w-[80%] lg:w-[70%] text-[12px]  sm:text-sm lg:text-base text-justify ">
+                        Whether you're launching a new business, building your personal brand, or looking to refresh your website, I'm here to help. Feel free to reach out with your idea or project.
+                        We'll schedule a call or meet over in person to discuss your vision and turn it into a fully functional website that not only looks great but delivers measurable results.
+                        I work closely with every client to understand their goals and build a custom design tailored to their vision from the initial concept to the final launch.
                     </p>
                     <Button text="Say hi" link="mailto:sajin.matija@gmail.com" />
                 </div>
                 <div className="w-1/2  flex flex-col gap-5 text-justify">
                     <h2 className="uppercase text-3xl md:text-6xl lg:text-7xl font-black md:font-bold">Say Hello!</h2>
-                    <p className="w-[90%] md:w-[80%] lg:w-[70%] text-[12px] sm:text-sm lg:text-base ">
+                    <p className="w-full md:w-[80%] lg:w-[70%] text-[12px] sm:text-sm lg:text-base ">
                         Have any questions about why having a website is important, about my design and development process or how it can help you grow your business or personal brand? Or maybe you just want to grab a cup of coffee to chat about an ideas? Feel free to reach out, I'm always happy to connect and answer your questions.
                     </p>
 

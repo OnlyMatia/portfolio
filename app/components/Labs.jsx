@@ -5,7 +5,7 @@ import { projects } from "../utils/projects"
 import { motion, useInView } from "framer-motion"
 import { useTheme } from "./ThemeContext"
 
-export default function Labs ({ setHovered }) {
+export default function Labs () {
     const {bgColor, txtColor} = useTheme()
     const titleRef = useRef(null)
     const isInView = useInView(titleRef, {
@@ -16,7 +16,7 @@ export default function Labs ({ setHovered }) {
     return (
         <section id="labs" className="min-h-screen w-full p-3 md:p-0" style={{background:bgColor, color:txtColor}}>
             <div
-            className={`text-4xl font-bold uppercase text-center overflow-hidden`}>
+            className={`text-4xl font-black uppercase text-center overflow-hidden `}>
 
                 <motion.h2 
                 ref={titleRef}
@@ -24,12 +24,12 @@ export default function Labs ({ setHovered }) {
                 animate={isInView ? {y:0} : {}}
                 transition={{duration: 0.5, ease: "easeOut"}}
                 >
-                    Some of my work
+                    Featured Projects
                 </motion.h2>
             </div>
             {projects.map((project, i) => {
                 return (
-                    <Project key={i} index={i} {...project} setHovered={setHovered} />
+                    <Project key={i} index={i} {...project} />
                 )
             })}
         </section>
@@ -38,15 +38,13 @@ export default function Labs ({ setHovered }) {
 
 
 
-function Project({title, desc, tech, image, color, index, setHovered}) {
+function Project({title, desc, tech, image, color, index,}) {
 
 
 
     return (
         <div  className=" h-screen flex justify-center items-center sticky top-0 " style={{top: `calc(0% + ${index * 30}px)`}}>
-            <div 
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            <div
             className=" sm:w-[90%] md:w-[80%] lg:w-[70%] h-[700px] sm:h-[550px] rounded-[50px] sm:rounded-[60px] md:rounded-[80px] flex flex-col sm:flex-row  bg-[#fafafa] border-1 border-[#1e1e1e]" >
 
                 <div className="p-8 sm:p-10 w-full md:w-1/2 flex flex-col justify-between gap-5"  >

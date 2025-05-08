@@ -9,37 +9,33 @@ export default function Footer (){
         <footer className="bottom-0 w-full  overflow-hidden h-auto flex justify-center" style={{background:bgColor, color:txtColor}}>
             <div className="flex flex-col justify-center gap-2 w-full">
                 
-                <ul className="flex flex-col md:flex-row gap-5 justify-around pt-5 border-t px-3  mt-10 ml-10 mr-10 text-xs md:text-base ">
-                    <li >
+                <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-around pt-3 md:pt-5 border-t px-3 text-center  ml-[5vw] mr-[5vw] text-xs md:text-base ">
+                    <div >
                         Feel free to contact me for a <br/>
                         project you have in mind. 
                         <a href="mailto:sajin.matija@gmail.com" >
                             Email
                         </a>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <span className=" cursor-pointer">
                             LinkedIn
                         </span>
-
                         <br/> 
                         <span className=" cursor-pointer">
                             GitHub
                         </span>
-                    </li>
-                    <li>
-                        I also help out here :d 
-                        <br />
-                        <a href="xtwo.dev" className=" cursor-pointer">
-                            Explore xTwo.dev
-                        </a>
-                    </li>
-                    <li>
+                        <br/> 
+                        <span className=" cursor-pointer">
+                            Instagram
+                        </span>
+                    </div>
+                    <div>
                         Designed & 
                         <br/> 
                         Developed by:
-                    </li>
-                </ul>
+                    </div>
+                </div>
                 
                 <div className="w-full flex justify-center ">
                     <Image 

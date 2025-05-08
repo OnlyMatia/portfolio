@@ -13,11 +13,6 @@ const steps = [
     {step: "Launch", desc: "Once everything is tested and optimized, I deploy the website and monitor its performance to ensure smooth operation on Vercel or hosting platform of choice."},
 ];
 
-const pixelify = localFont({
-    src: "../fonts/Pixelify_sans.ttf",
-    weight: "700",
-    style: "normal",
-});
 
 export default function Work () {
     const {bgColor, txtColor} = useTheme()
@@ -35,14 +30,14 @@ export default function Work () {
     return (
         <section id="work" className="min-h-screen w-full flex flex-col justify-center p-10 md:p-20 lg:p-30 space-y-7 overflow-hidden" 
         style={{background:bgColor, color:txtColor}} >
-            <div  className={`text-4xl md:text-5xl font-black capitalize overflow-hidden mb-20 text-center`}>
+            <div  className={`text-4xl md:text-2xl font-black capitalize overflow-hidden mb-10`}>
             <motion.h2 
                 ref={refTitle}
                 initial={{y: "100%"}}
                 animate={isInView ? {y:-5} : {}}
                 transition={{duration: 0.5, ease: "easeOut"}}
                 >
-                    Steps to perfection
+                    Steps to perfect website
                 </motion.h2>
             </div>
 
@@ -58,7 +53,7 @@ export default function Work () {
 
                 return (
                     <div className="space-y-5 w-full flex justify-center"  key={i} onClick={() => toggleStep(i)} ref={ref} >
-                        <motion.div className="flex flex-col w-full border-b-1 cursor-pointer max-w-7xl" style={{opacity}}>
+                        <motion.div className="flex flex-col w-full border-b-1 cursor-pointer " style={{opacity}}>
                             <div className={`flex justify-between py-2 text-3xl font-bold `} >
                                 <motion.span style={{x: xNum}}>
                                     {"0" + (i+1)}

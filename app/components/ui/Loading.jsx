@@ -7,7 +7,7 @@ export default function Loading ({value} ) {
     const element = useRef(null)
     const { scrollYProgress} = useScroll({
         target: element,
-        offset: ['start 0.9', 'start 0.3']
+        offset: ['start 0.9', 'start 0.4']
     })
 
     const words = value.split(" ")

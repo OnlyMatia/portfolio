@@ -52,7 +52,7 @@ export default function Loader() {
         <motion.section 
         initial={{ y: 0 }}
         animate={controls}
-        className="fixed h-[100dvh]  z-60 w-full flex justify-between flex-col md:p-15 "
+        className="fixed h-[100dvh]  z-60 w-full flex justify-between flex-col md:p-15 border-b-[1px]"
         style={{background:bgColor, color:txtColor}}>
             <div className="text-6xl md:text-9xl font-bold overflow-hidden p-2">
                 <motion.h2
@@ -60,7 +60,7 @@ export default function Loader() {
                 variants={container}
                 initial="hidden"
                 animate="visible">
-                    {"Welcome".split("").map((el, i) => {
+                    {"Hello".split("").map((el, i) => {
                         return (
                             <motion.span
                             key={i}

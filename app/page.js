@@ -16,31 +16,31 @@ import { ThemeContext } from "./components/ThemeContext";
 
 export default function Page() {
   const [hovered, setHovered] = useState(false);
-  const [theme, setTheme] = useState(1)
+  const [theme, setTheme] = useState(0)
   const themes=[
     {
       bgColor: "#1e1e1e",
       txtColor: "#fff",
-      hoverColor: "#7F7F79",
-    },
-    {
-      bgColor: "#b2ecfe",
-      txtColor: "#0b36d0",
       hoverColor: "",
     },
     {
-      bgColor: "#FC4332",
-      txtColor: "#69201E",
+      bgColor: "#283949", /*blue*/
+      txtColor: "#8DCBE4",
+      hoverColor: "#1A242F",
+    },
+    {
+      bgColor: "#5C0100",
+      txtColor: "#FFA664",
+      hoverColor: "#921C1C",
+    },
+    {
+      bgColor: "",
+      txtColor: "",
       hoverColor: "",
     },
     {
-      bgColor: "#65C999",
-      txtColor: "#193D34",
-      hoverColor: "",
-    },
-    {
-      bgColor: "#fd7807",
-      txtColor: "#FDDB36",
+      bgColor: "",
+      txtColor: "",
       hoverColor: "",
     }
     
