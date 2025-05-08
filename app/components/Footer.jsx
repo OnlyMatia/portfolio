@@ -1,34 +1,38 @@
+"use client"
+
 import Image from "next/image";
 import { useTheme } from "./ThemeContext";
 
 
 export default function Footer (){
-    const {bgColor, txtColor, hoverColor} = useTheme()
+    const {bgColor, txtColor} = useTheme()
 
     return (
         <footer className="bottom-0 w-full  overflow-hidden h-auto flex justify-center" style={{background:bgColor, color:txtColor}}>
-            <div className="flex flex-col justify-center gap-2 w-full">
+            <div className="flex flex-col justify-center gap-1 w-full">
                 
-                <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-around pt-3 md:pt-5 border-t px-3 text-center  ml-[5vw] mr-[5vw] text-xs md:text-base ">
-                    <div >
+                <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-around pt-3 md:pt-5 border-t px-3   ml-[5vw] mr-[5vw] text-xs md:text-base ">
+                    <div className="inline-block">
                         Feel free to contact me for a <br/>
                         project you have in mind. 
-                        <a href="mailto:sajin.matija@gmail.com" >
+                        <a href="mailto:sajin.matija@gmail.com" className="cursor-pointer relative  overflow-hidden group" >
                             Email
+                            <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
                         </a>
                     </div>
-                    <div>
-                        <span className=" cursor-pointer">
-                            LinkedIn
-                        </span>
-                        <br/> 
-                        <span className=" cursor-pointer">
-                            GitHub
-                        </span>
-                        <br/> 
-                        <span className=" cursor-pointer">
+                    <div className="flex flex-col">
+                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
                             Instagram
-                        </span>
+                            <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
+                        </div>
+                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
+                            GitHub
+                            <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
+                        </div>
+                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
+                            LinkedIn
+                            <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
+                        </div>
                     </div>
                     <div>
                         Designed & 

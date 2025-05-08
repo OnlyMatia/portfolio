@@ -24,14 +24,14 @@ export default function Navbar({changeColor}){
     const [isOpen, setIsOpen] = useState(false)
     const [fade, setFade] = useState(false)
     const links = [{name:"home", link:"#header"}, {name:"about", link:"#about"}, {name:"work", link:"#labs"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
-    const {bgColor, txtColor} = useTheme()
+    const {bgColor, txtColor, hoverColor} = useTheme()
 
     return (
         <motion.nav
         initial={{y: '-100%', opacity: 0}}           
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay: 1}}
-        className={` fixed top-0 left-0 w-full z-50 py-3 sm:py-5 md:py-10 flex justify-center `} style={isOpen ? {color:bgColor} : {color:txtColor}}>           
+        className={` fixed top-0 left-0 w-full z-50 py-3 sm:py-5 md:py-10 flex justify-center `} style={{color:txtColor}}>           
             <div className="flex items-center justify-between w-[90%] ">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
                     <div>
@@ -52,8 +52,8 @@ export default function Navbar({changeColor}){
                         setFade(!fade) 
                         setIsOpen(!isOpen)}}
                 >
-                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`} style={isOpen ? {background:bgColor} : {background:txtColor}}></span>
-                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} style={isOpen ? {background:bgColor} : {background:txtColor}}></span>
+                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`} style={{background:txtColor}}></span>
+                    <span className={`block w-12 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} style={{background:txtColor}}></span>
                 </button></div>
             </div>
 
@@ -61,7 +61,7 @@ export default function Navbar({changeColor}){
             {isOpen && (
                 <motion.div 
                 className={` absolute top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center z-40  `}
-                style={{background:txtColor, color:bgColor}}
+                style={{background:hoverColor, color:txtColor}}
                 key="fade-box"
                 initial={{ y: "-100%"}}
                 animate={{ y: 0}}

@@ -22,12 +22,13 @@ export const projects = [
         tech: ["Figma", "Illustrator", "NextJS" , "Supabase", "Vercel" ], 
         image: "", 
         color: "#65C999"
-    }, {
-        id: 4,
-        title: "Future Projects.", 
-        desc: "In development...", 
-        tech: ["NextJS", "Figma", "Tailwind", "WordPress" ], 
-        image: "", 
-        color: "#fd7807"
-    },
+    }, 
+    //{
+    //     id: 4,
+    //     title: "Future Projects.", 
+    //     desc: "In development...", 
+    //     tech: ["NextJS", "Figma", "Tailwind", "WordPress" ], 
+    //     image: "", 
+    //     color: "#fd7807"
+    // },
 ]

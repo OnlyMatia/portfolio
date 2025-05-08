@@ -47,18 +47,18 @@ function Project({title, desc, tech, image, color,}) {
         <div  className="w-full h-auto md:pt-20 flex justify-center items-center md:sticky top-0 p-3 md:p-0" style={{top: `calc(0% + 60px)`}}>
             
             <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
-                <div className="border p-2 md:p-5 md:w-1/2 h-[30vw] w-full">
+                <div className="border p-2 lg:p-5 lg:w-1/2 h-[30vw] lg:h-[30vw] w-full">
                 
                 </div>
-                <div className="md:w-1/2 w-full flex flex-col justify-between">
-                    <div className="flex flex-col-reverse md:flex-row justify-between pr-2 gap-2 md:gap-10 " >
+                <div className="lg:w-1/2 w-full flex flex-col justify-between">
+                    <div className="flex flex-col-reverse lg:flex-row justify-between pr-2 gap-2 lg:gap-10 " >
                         <p className=" text-xs md:text-sm font-bold">{`${desc.slice(0, 200)}...`}</p>
-                        <h3 className="font-black text-2xl lg:text-4xl uppercase md:text-right">{title}</h3>
+                        <h3 className="font-black text-2xl lg:text-4xl uppercase lg:text-right">{title}</h3>
                     </div>
-                    <div className="md:flex flex-col font-bold hidden " >
+                    <div className="md:flex md:flex-row lg:flex-col font-bold hidden gap-1" >
                         {tech.map((el) => {
                             return (
-                                <span key={el} style={{background:txtColor, color:bgColor}} className="relative overflow-hidden inline-block py-1 px-3 w-fit my-1">
+                                <span key={el} style={{background:txtColor, color:bgColor}} className="relative overflow-hidden inline-block py-1 px-2 w-fit my-1">
                                     {el}
                                 </span>
                             )

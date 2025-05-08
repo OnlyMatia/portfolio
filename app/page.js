@@ -21,7 +21,7 @@ export default function Page() {
     {
       bgColor: "#1e1e1e",
       txtColor: "#fff",
-      hoverColor: "",
+      hoverColor: "#272727",
     },
     {
       bgColor: "#283949", /*blue*/
@@ -29,9 +29,19 @@ export default function Page() {
       hoverColor: "#1A242F",
     },
     {
-      bgColor: "#5C0100",
+      bgColor: "#5C0100", /*red*/
       txtColor: "#FFA664",
       hoverColor: "#921C1C",
+    },
+    {
+      bgColor: "#386652",/*green*/   /*#004D34*/
+      txtColor: "#b0d3b9",            /*#A8FFD6*/
+      hoverColor: "#28483a",
+    },
+    {
+      bgColor: "#4D3B00",/*yellow*/
+      txtColor: "#FFE791",
+      hoverColor: "#7b5e00",
     },
     
   ]
