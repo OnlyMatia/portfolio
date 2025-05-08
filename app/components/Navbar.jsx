@@ -31,8 +31,8 @@ export default function Navbar({changeColor}){
         initial={{y: '-100%', opacity: 0}}           
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay: 1}}
-        className={` fixed top-0 left-0 w-full  z-50 p-3 sm:p-5 md:p-10 flex justify-center `} style={isOpen ? {color:bgColor} : {color:txtColor}}>           
-            <div className="container mx-auto flex items-center justify-between w-[90%] ">
+        className={` fixed top-0 left-0 w-full z-50 py-3 sm:py-5 md:py-10 flex justify-center `} style={isOpen ? {color:bgColor} : {color:txtColor}}>           
+            <div className="flex items-center justify-between w-[90%] ">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
                     <div>
                         <a href="#header" className="cursor-pointer flex flex-col md:flex-row ">

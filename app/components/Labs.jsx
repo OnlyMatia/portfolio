@@ -14,22 +14,23 @@ export default function Labs () {
     })
 
     return (
-        <section id="labs" className="min-h-screen w-full p-3 md:p-0" style={{background:bgColor, color:txtColor}}>
+        <section id="labs" className="h-auto w-full  " style={{background:bgColor, color:txtColor}}>
             <div
-            className={`text-4xl font-black uppercase text-center overflow-hidden `}>
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase md:sticky top-20 overflow-hidden flex justify-center opacity-[0.5]`}>
 
                 <motion.h2 
                 ref={titleRef}
                 initial={{y: "100%"}}
                 animate={isInView ? {y:0} : {}}
                 transition={{duration: 0.5, ease: "easeOut"}}
+                className="w-full md:w-[90%] px-3 md:px-0"
                 >
                     Featured Projects
                 </motion.h2>
             </div>
             {projects.map((project, i) => {
                 return (
-                    <Project key={i} index={i} {...project} />
+                    <Project key={i} {...project} />
                 )
             })}
         </section>
@@ -38,35 +39,34 @@ export default function Labs () {
 
 
 
-function Project({title, desc, tech, image, color, index,}) {
-
+function Project({title, desc, tech, image, color,}) {
+    const {bgColor, txtColor} = useTheme()
 
 
     return (
-        <div  className=" h-screen flex justify-center items-center sticky top-0 " style={{top: `calc(0% + ${index * 30}px)`}}>
-            <div
-            className=" sm:w-[90%] md:w-[80%] lg:w-[70%] h-[700px] sm:h-[550px] rounded-[50px] sm:rounded-[60px] md:rounded-[80px] flex flex-col sm:flex-row  bg-[#fafafa] border-1 border-[#1e1e1e]" >
-
-                <div className="p-8 sm:p-10 w-full md:w-1/2 flex flex-col justify-between gap-5"  >
-                    <div className="text-[#1e1e1e] space-y-5 cursor-default">
-                        <h2 className={`text-3xl md:text-4xl  font-bold `}>{title}</h2>
-                        <p className="text-xs md:text-base ">
-                            {desc.split(" ").slice(0, 35).join(" ")}{desc.split(" ").length > 35 && "..."}
-                        </p>
+        <div  className="w-full h-auto md:pt-20 flex justify-center items-center md:sticky top-0 p-3 md:p-0" style={{top: `calc(0% + 60px)`}}>
+            
+            <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
+                <div className="border p-2 md:p-5 md:w-1/2 h-[30vw] w-full">
+                
+                </div>
+                <div className="md:w-1/2 w-full flex flex-col justify-between">
+                    <div className="flex flex-col-reverse md:flex-row justify-between pr-2 gap-2 md:gap-10 " >
+                        <p className=" text-xs md:text-sm font-bold">{`${desc.slice(0, 200)}...`}</p>
+                        <h3 className="font-black text-2xl lg:text-4xl uppercase md:text-right">{title}</h3>
                     </div>
-                    <div className="flex gap-2 flex-wrap">
-                        {tech.map((el, i) => {
-                            return  <span key={i} className="bg-[#1e1e1e] text-white px-4 py-2 rounded-full">{el}</span>
+                    <div className="md:flex flex-col font-bold hidden " >
+                        {tech.map((el) => {
+                            return (
+                                <span key={el} style={{background:txtColor, color:bgColor}} className="relative overflow-hidden inline-block py-1 px-3 w-fit my-1">
+                                    {el}
+                                </span>
+                            )
                         })}
                     </div>
                 </div>
-
-                <div className=" w-full md:w-1/2 h-full rounded-[50px] md:rounded-[80px] border-1 border-[#1e1e1e] overflow-hidden" style={{backgroundColor:color}}>
-
-                </div>
             </div>
-
-            
+        
         </div>
     )
 }

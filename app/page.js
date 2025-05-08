@@ -33,16 +33,6 @@ export default function Page() {
       txtColor: "#FFA664",
       hoverColor: "#921C1C",
     },
-    {
-      bgColor: "",
-      txtColor: "",
-      hoverColor: "",
-    },
-    {
-      bgColor: "",
-      txtColor: "",
-      hoverColor: "",
-    }
     
   ]
 
