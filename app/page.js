@@ -10,8 +10,8 @@ import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Mouse from "./components/ui/Mouse";
 import SecHeader from "./components/ui/SecHeader";
-import Work from "./components/Work";
 import { ThemeContext } from "./components/ThemeContext";
+import Steps from "./components/Steps";
 
 
 export default function Page() {
@@ -35,7 +35,7 @@ export default function Page() {
     },
     {
       bgColor: "#386652",/*green*/   /*#004D34*/
-      txtColor: "#b0d3b9",            /*#A8FFD6*/
+      txtColor: "#A8FFD6",           
       hoverColor: "#28483a",
     },
     {
@@ -77,7 +77,7 @@ export default function Page() {
         <About />
         
         <Labs setHovered={setHovered} />
-        <Work />
+        <Steps />
         <ContactAction />
         <Footer />
       </main>

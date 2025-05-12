@@ -20,8 +20,8 @@ export default function Navbar({changeColor}){
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay: 1}}
         className={` fixed top-0 left-0 w-full z-50 py-2 px-2 sm:py-3 md:py-5 flex justify-center items-center backdrop-blur`} style={{color:txtColor, background: bgColor+"90"}}>           
-            <div className="flex items-center justify-between w-full md:w-[90%] ">
-                <a href="#header" className="flex-1 min-w-0 truncate text-xl md:text-3xl z-50 ">
+            <div className="flex items-center justify-between w-full md:w-[90%] z-50">
+                <a href="#header" className="flex-1 min-w-0 truncate text-xl md:text-3xl">
                     <div className="text-normal md:text-xl font-black cursor-pointer flex flex-col md:flex-row tracking-tight">
                         <span>MATIJA </span><span className="md:block hidden">ŠAJIN</span>
                     </div>
@@ -29,13 +29,13 @@ export default function Navbar({changeColor}){
                 
                 <Button text="Mix" onClick={changeColor} />
                 
-                <div className="flex justify-end flex-1 items-center gap-2">
+                <div className="flex justify-end flex-1 items-center gap-2 cursor-pointer"
+                onClick={()=> {
+                            setFade(!fade) 
+                            setIsOpen(!isOpen)}}>
                 <p className=" text-xs md:text-sm z-50 ">{isOpen ? "Close" : "Menu"}</p>
                     <button
-                        className={`flex flex-col justify-center gap-1.5 py-3 px-auto rounded z-50 cursor-pointer `}
-                        onClick={()=> {
-                            setFade(!fade) 
-                            setIsOpen(!isOpen)}}
+                        className={`flex flex-col justify-center gap-1.5 py-3 px-auto rounded cursor-pointer`}
                     >
                         
                         <span className={`block w-5 md:w-10 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`} style={{background:txtColor}}></span>
