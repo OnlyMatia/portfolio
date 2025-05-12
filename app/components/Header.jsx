@@ -17,7 +17,7 @@ export default function Header () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <header id="header" className={` flex flex-col min-h-[100dvh] items-center justify-center w-full cursor-default md:gap-[5vw]`} 
+        <header id="header" className={` flex flex-col h-screen items-center justify-center w-full cursor-default md:gap-[2vw]`} 
         style={{background: bgColor, color: txtColor}}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">
@@ -31,7 +31,7 @@ export default function Header () {
             </motion.span>
 
             <motion.span
-            initial={{y: '-100%', opacity: 0}}           
+            initial={{y: '-100%', opacity: 0}}
             animate={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 0.75}}>
                 <Zoop text="Developer" autoAnimate />
@@ -70,7 +70,7 @@ export default function Header () {
         </section>
 
         
-        <section className={`w-[90%] flex sm:pb-4 overflow-hidden flex-row justify-center md:justify-between`}>
+        <section className={`w-[90%]  flex sm:pb-4 overflow-hidden flex-row justify-center md:justify-between`}>
             <motion.div
             initial={{x: '-100%', opacity: 0}}
             animate={{x: 0, opacity: 1}}
@@ -78,18 +78,18 @@ export default function Header () {
             className="hidden md:block">
                 
                 <div className={`max-w-[280px] flex flex-col gap-5 text-[${txtColor}]`}>
-                <div className="text-4xl capitalize">
-                    <h3 className="border-t border-b py-1 ">Front-end</h3>
-                    <h3 className="border-b py-1">Developer &</h3>
-                    <h3 className="border-b py-1">Web designer</h3>
-                </div>
-                <p className="text-sm">I'm freelance front-end developer & web designer, co-founder of xTwo.dev. Helping bold brands and ideas come to life on the web. </p>
-                <a href="https://xtwo.dev" className="font-bold w-fit">
-                    <span className="relative inline-block overflow-hidden group">
-                    Explore more.
-                    <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}></span>
-                    </span>
-                </a>
+                    <div className="text-4xl capitalize">
+                        <h3 className="border-t border-b py-1 ">Front-end</h3>
+                        <h3 className="border-b py-1">Developer &</h3>
+                        <h3 className="border-b py-1">Web designer</h3>
+                    </div>
+                    <p className="text-sm">I'm freelance front-end developer & web designer, co-founder of xTwo.dev. Helping bold brands and ideas come to life on the web. </p>
+                    <a href="https://xtwo.dev" className="font-bold w-fit">
+                        <span className="relative inline-block overflow-hidden group">
+                        Explore more.
+                        <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}></span>
+                        </span>
+                    </a>
                 </div>
 
             </motion.div>

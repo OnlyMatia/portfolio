@@ -5,7 +5,7 @@ export default function SecHeader () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <section className="md:hidden flex w-full items-end h-[50vh]" style={{background: bgColor, color: txtColor}}>
+        <section className="md:hidden flex w-full items-end h-[35vh]" style={{background: bgColor, color: txtColor}}>
             <div>
                 
                 <div className="w-full flex flex-col gap-5 px-3">

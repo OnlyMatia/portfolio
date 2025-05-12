@@ -14,10 +14,10 @@ export default function ContactAction () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-    <section className="min-h-[80vh] w-full flex items-center justify-center p-5 md:p-0" 
+    <section className="min-h-[80vh] w-full flex items-center justify-center px-3 md:p-0" 
     style={{background:bgColor,color:txtColor}}>
         
-        <div className=" md:max-w-[90%] lg:max-w-[80%] flex gap-5 flex-col ">
+        <div className=" md:max-w-[90%] lg:max-w-[80%] flex gap-2 md:gap-5 flex-col ">
             <div className="uppercase text-[32px] sm:text-6xl  md:text-8xl lg:text-8xl font-black w-full ">
                 <h2>Need a website?</h2>
             </div>

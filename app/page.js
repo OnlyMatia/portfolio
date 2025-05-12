@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "./components/About";
 import ContactAction from "./components/ContactAction";
 import Footer from "./components/Footer";
@@ -46,8 +46,22 @@ export default function Page() {
     
   ]
 
+  useEffect(() => {
+    const stored = localStorage.getItem("storedTheme");
+    if (stored !== null) {
+      const parsed = parseInt(stored, 10);
+      if (!isNaN(parsed)) {
+        setTheme(parsed);
+      }
+    }
+  }, []);
+
   const changeColor = () => {
-    setTheme((prev) => (prev + 1) % themes.length);
+    setTheme((prev) => {
+      const next = (prev + 1) % themes.length;
+      localStorage.setItem("storedTheme", next.toString());
+      return next;
+    });
   };
 
 

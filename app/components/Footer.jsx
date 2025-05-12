@@ -14,7 +14,7 @@ export default function Footer (){
                 <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-around pt-3 md:pt-5 border-t px-3   ml-[5vw] mr-[5vw] text-xs md:text-base ">
                     <div className="inline-block">
                         Feel free to contact me for a <br/>
-                        project you have in mind. 
+                        project you have in mind. <br/>
                         <a href="mailto:sajin.matija@gmail.com" className="cursor-pointer relative  overflow-hidden group" >
                             Email
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
