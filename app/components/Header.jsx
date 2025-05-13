@@ -17,7 +17,7 @@ export default function Header () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <header id="header" className={` flex flex-col h-[100dvh] items-center justify-center w-full cursor-default md:gap-[2vw]`} 
+        <header id="header" className={` flex flex-col min-h-[100svh] items-center justify-center w-full cursor-default md:gap-[2vw]`} 
         style={{background: bgColor, color: txtColor}}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">

@@ -50,7 +50,7 @@ export default function Navbar({changeColor}){
             <AnimatePresence>
             {isOpen && (
                 <motion.div 
-                className={` absolute top-0 left-0 w-full min-h-screen flex flex-col justify-center items-center z-40 pb-30 `}
+                className={` absolute top-0 left-0 w-full h-[100dvh] flex flex-col justify-center items-center z-40 pb-30 `}
                 style={{background:hoverColor, color:txtColor}}
                 key="fade-box"
                 initial={{ y: "-100%"}}
