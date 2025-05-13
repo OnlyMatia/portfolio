@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { projects } from "../utils/projects"
 import { motion, useInView } from "framer-motion"
 import { useTheme } from "./ThemeContext"
+import Image from "next/image"
 
 export default function Labs () {
     const {bgColor, txtColor} = useTheme()
@@ -47,8 +48,13 @@ function Project({title, desc, tech, image, color,}) {
         <div  className="w-full h-auto md:pt-20 flex justify-center items-center md:sticky top-0 p-3 md:p-0" style={{top: `calc(0% + 60px)`}}>
             
             <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
-                <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full">
-                
+                <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative">
+                    <Image 
+                        src={image}
+                        alt="Project preview"
+                        fill
+                        className="object-cover"
+                    />
                 </div>
                 <div className="lg:w-1/2 w-full flex flex-col justify-between">
                     <div className="flex flex-col-reverse lg:flex-row justify-between pr-2 gap-2 lg:gap-10 " >
