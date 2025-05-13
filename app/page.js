@@ -24,24 +24,29 @@ export default function Page() {
       hoverColor: "#272727",
     },
     {
-      bgColor: "#283949", /*blue*/
+      bgColor: "#283949",   /*blue*/
       txtColor: "#8DCBE4",
       hoverColor: "#1A242F",
     },
     {
-      bgColor: "#5C0100", /*red*/
+      bgColor: "#5C0100",   /*red*/
       txtColor: "#FFA664",
       hoverColor: "#921C1C",
     },
     {
-      bgColor: "#386652",/*green*/   /*#004D34*/
-      txtColor: "#A8FFD6",           
+      bgColor: "#004D34",   /*green*/   
+      txtColor: "#ffc0e9",           
       hoverColor: "#28483a",
     },
     {
-      bgColor: "#4D3B00",/*yellow*/
-      txtColor: "#FFE791",
-      hoverColor: "#7b5e00",
+      bgColor: "#040F49",   /*dark blue*/
+      txtColor: "#FF0000",
+      hoverColor: "#070449",
+    },
+    {
+      bgColor: "#a78900",   /*yellow*/
+      txtColor: "#FFF6C2",
+      hoverColor: "#B89002",
     },
     
   ]

@@ -14,7 +14,7 @@ export default function ContactAction () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-    <section className="min-h-[80vh] w-full flex items-center justify-center px-3 md:p-0" 
+    <section className="min-h-[50vh] w-full flex items-center justify-center px-3 md:p-0" 
     style={{background:bgColor,color:txtColor}}>
         
         <div className=" md:max-w-[90%] lg:max-w-[80%] flex gap-2 md:gap-5 flex-col ">

@@ -1,6 +1,6 @@
 "use client"
 
-import {  useState } from "react"
+import {  useEffect, useState } from "react"
 import { motion, AnimatePresence,  } from "framer-motion"
 import Zoop from "./ui/Zoop"
 import Button from "./ui/Button";
@@ -13,6 +13,17 @@ export default function Navbar({changeColor}){
     const [fade, setFade] = useState(false)
     const links = [{name:"home", link:"#header"}, {name:"about", link:"#about"}, {name:"work", link:"#labs"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
     const {bgColor, txtColor, hoverColor} = useTheme()
+
+    useEffect(() => {
+    if (isOpen) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+    return () => {
+        document.body.style.overflow = '';
+    };
+}, [isOpen]);
 
     return (
         <motion.nav
@@ -74,17 +85,17 @@ export default function Navbar({changeColor}){
                             }}
                             className="w-full flex justify-center "
                             >
-                                <a href={item.link} className="flex cursor-pointer text-6xl sm:text-6xl font-black md:text-7xl uppercase hover:opacity-[0.5] transition-all duration-200 ">
+                                <a href={item.link} className="flex cursor-pointer text-6xl sm:text-6xl font-black md:text-7xl uppercase hover:opacity-[0.5] transition-all duration-100 ">
                                     <h2>{item.name}</h2>
                                 </a>
                             </motion.li>
                         ))}
                     </ul>
                     
-                    <ul className="absolute bottom-0 flex justify-center left-0 gap-10 px-3 py-10 font-semibold w-full">
+                    <ul className="absolute bottom-0 flex justify-center left-0 gap-20 px-3 py-10  w-full">
                         {[{name:"Instagram", link:"https://www.instagram.com/matiasajin/"}, {name:"GitHub", link:"https://github.com/OnlyMatia"}, {name:"LinkedIn", link:"https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/"}].map((item, i) => (
                             <motion.li key={i} 
-                            className="sm:text-xl lowercase"
+                            className="sm:text-xl"
                             initial={{opacity: 0, y: 10}}
                             animate={{opacity:1, y:0 }}
                             exit={{
@@ -96,7 +107,12 @@ export default function Navbar({changeColor}){
                                 duration: 0.3,
                                 delay: 0.3
                             }}
-                            ><Zoop text={item.name} href={item.link} /></motion.li>
+                            >
+                                <a href={item.link} className="group">
+                                    {item.name}
+                                    <span className={`h-[1px] w-0  block group-hover:w-full ease-in duration-200 rounded-full`} style={{backgroundColor: txtColor}} />
+                                </a>
+                            </motion.li>
                         ))}
                     </ul>
                 </motion.div>

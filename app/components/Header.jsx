@@ -16,7 +16,7 @@ const LoaderDelay = 0.8
 
 export default function Header () {
     const {bgColor, txtColor} = useTheme()
-    
+
     useEffect(() => {
     const setViewportHeight = () => {
         const vh = window.innerHeight * 0.01;
@@ -34,7 +34,7 @@ export default function Header () {
             background: bgColor,
             color: txtColor,
             minHeight: "calc(var(--vh, 1vh) * 100)"
-            }}>
+        }}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">
             <h1 className="text-7xl md:text-8xl lg:text-[9vw] font-bold flex space-x-5 md:flex-row flex-col ">
@@ -67,22 +67,7 @@ export default function Header () {
             })}
             </h3>
 
-            <div className="flex justify-center gap-5 pt-5 font-bold ">
-                {[{name:"Instagram", link:"https://www.instagram.com/matiasajin/"}, {name:"GitHub", link:"https://github.com/OnlyMatia"}, {name:"LinkedIn", link:"https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/"}].map((el, i) => {
-                return (
-                    <motion.div
-                    key={i} 
-                    initial={{y: '-100%', opacity: 0}}           
-                    animate={{y: 0, opacity: 1}}
-                    transition={{duration: 0.6, delay: LoaderDelay+ (0.05 * i)}}>
-                        <a href={el.link} className="group">
-                            {el.name}
-                            <span className={`h-[1px] w-0  block group-hover:w-full ease-in duration-200 rounded-full`} style={{backgroundColor: txtColor}} />
-                        </a>
-                    </motion.div>
-                )
-                })}
-            </div>
+            
         </section>
         
         <section className={`w-[90%]  flex sm:pb-4 overflow-hidden flex-row justify-center md:justify-between`}>
@@ -109,20 +94,22 @@ export default function Header () {
 
             </motion.div>
 
-            <motion.div 
-            initial={{scale:0,rotate:40}}
-            animate={{scale:1,rotate:0}}
-            transition={{duration:0.6, delay: LoaderDelay}}
-            className="flex items-end flex-col justify-end">
-
-                <p className={`text-sm text-[${txtColor}]`}>Whats up, I'm Matija</p>
-                <div className="w-[200px] h-[200px] relative overflow-hidden rounded-sm">
-                
-                <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover" >
-                    <source src="/wazap.mp4" type="video/mp4" />
-                </video>
-                </div>
-            </motion.div>
+            <div className="flex items-end justify-between md:pb-0 pb-10 font-bold md:w-auto md:gap-10 w-full">
+                {[{name:"Instagram", link:"https://www.instagram.com/matiasajin/"}, {name:"GitHub", link:"https://github.com/OnlyMatia"}, {name:"LinkedIn", link:"https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/"}].map((el, i) => {
+                return (
+                    <motion.div
+                    key={i} 
+                    initial={{y: '-100%', opacity: 0}}           
+                    animate={{y: 0, opacity: 1}}
+                    transition={{duration: 0.6, delay: LoaderDelay+ (0.05 * i)}}>
+                        <a href={el.link} className="group">
+                            {el.name}
+                            <span className={`h-[1px] w-0  block group-hover:w-full ease-in duration-200 rounded-full`} style={{backgroundColor: txtColor}} />
+                        </a>
+                    </motion.div>
+                )
+                })}
+            </div>
 
             
         </section>
