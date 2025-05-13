@@ -6,7 +6,7 @@ export default function Steps () {
 
     return (
         <section className="min-h-screen md:h-[40vh] w-full flex justify-center p-3 md:p-0 " style={{background:bgColor, color:txtColor}}>
-            <div className="w-full h-full md:w-[90%] flex flex-col gap-20 items-center justify-center">
+            <div className="w-full md:w-[90%] flex flex-col gap-20 items-center justify-center">
                 <div className="w-full font-black text-5xl md:text-6xl lg:text-7xl uppercase pt-20 text-left">
                     <h2>Modern.</h2>
                     <h2 >Styled to stand out.</h2>
