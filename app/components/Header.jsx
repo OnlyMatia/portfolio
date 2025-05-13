@@ -3,6 +3,7 @@ import Zoop from "./ui/Zoop";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import { useTheme } from "./ThemeContext";
+import { useEffect } from "react";
 
 const pixelify = localFont({
     src: "../fonts/Pixelify_sans.ttf",
@@ -15,10 +16,25 @@ const LoaderDelay = 0.8
 
 export default function Header () {
     const {bgColor, txtColor} = useTheme()
+    
+    useEffect(() => {
+    const setViewportHeight = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    return () => window.removeEventListener('resize', setViewportHeight);
+}, []);
 
     return (
-        <header id="header" className={` flex flex-col min-h-[100svh] items-center justify-center w-full cursor-default md:gap-[2vw]`} 
-        style={{background: bgColor, color: txtColor}}>
+        <header id="header" className={` flex flex-col items-center justify-center w-full cursor-default md:gap-[2vw]`} 
+        style={{
+            background: bgColor,
+            color: txtColor,
+            minHeight: "calc(var(--vh, 1vh) * 100)"
+            }}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">
             <h1 className="text-7xl md:text-8xl lg:text-[9vw] font-bold flex space-x-5 md:flex-row flex-col ">
