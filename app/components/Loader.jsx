@@ -28,25 +28,25 @@ export default function Loader() {
     }, [controls])
 
 
-    const container = {
-        hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 0.05, 
-            },
-        },
-    };
+    // const container = {
+    //     hidden: {},
+    //     visible: {
+    //         transition: {
+    //             staggerChildren: 0.05, 
+    //         },
+    //     },
+    // };
     
-    const child = {
-        hidden: { y: "150px" },
-        visible: {
-            y: 0,
-            transition: {
-                duration: 0.2,
-                ease: "easeOut",
-            },
-        },
-    };
+    // const child = {
+    //     hidden: { y: "150px" },
+    //     visible: {
+    //         y: 0,
+    //         transition: {
+    //             duration: 0.2,
+    //             ease: "easeOut",
+    //         },
+    //     },
+    // };
 
     return (
         <motion.section 
