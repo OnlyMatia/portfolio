@@ -73,7 +73,7 @@ export default function Page() {
   return (
     <ThemeContext.Provider value={themes[theme]}>
       <main className="items-center justify-items-center gap-16 ">
-        <Mouse hovered={hovered}/>
+        {/* <Mouse hovered={hovered}/> */}
         
         <Loader /> 
         <Navbar changeColor={changeColor} />     

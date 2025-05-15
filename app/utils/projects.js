@@ -8,7 +8,7 @@ export const projects = [
         tech: ["Figma", "PhotoShop", "ReactJS",  "CPanel" ], 
         image: "/cupter.png", 
         color: "#b2ecfe",
-        link: "https://medallion.ba/"
+        link: "/medallion"
     }, {
         id: 2,
         title: "Unique by Mirza", 
@@ -16,15 +16,15 @@ export const projects = [
         tech: [ "Figma", "NextJS", "Framer-motion", "Vercel" ], 
         image: "/mirza.png", 
         color: "#FC4332",
-        link: "https://uniquebymirza.com/"
+        link: "/uniquebymirza"
     }, {
         id: 3,
-        title: "SportBuddy", 
+        title: "TerminBuddy", 
         desc: "A personal project, terminBuddy is a web platform designed to bring people together through a shared passion for sports and active lifestyles. Whether you're looking for a partner to join your training session, want to find a group for a casual match, or simply wish to discover new sports activities in your area and meet new people, TerminBuddy makes it easy. The website allows users to browse and join existing sports groups or create their own sessions and invite others to participate. It's built with community and accessibility in mind, offering a simple and intuitive interface where players of all skill levels can connect. From football and basketball to tennis or even running groups, TerminBuddy helps users stay active, meet new people, and make the most of their free time. It's not just about finding a match—it's about building a sports community around you. Whether you're new in town, tired of playing solo, or just want to discover who else is out there playing the sport you love, TerminBuddy is your go-to tool for making those connections happen.", 
         tech: ["Figma", "Illustrator", "NextJS" , "Supabase", "Vercel" ], 
         image: "/termin.png", 
         color: "#65C999",
-        link: "https://terminbuddy.vercel.app/"
+        link: "/terminbuddy"
     }, 
     //{
     //     id: 4,
