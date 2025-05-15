@@ -50,7 +50,7 @@ function Project({title, desc, tech, image, color,}) {
             <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
                 <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative">
                     <Image 
-                        src={image}
+                        src={image || null}
                         alt="Project preview"
                         fill
                         className="object-cover"
@@ -58,7 +58,7 @@ function Project({title, desc, tech, image, color,}) {
                 </div>
                 <div className="lg:w-1/2 w-full flex flex-col justify-between">
                     <div className="flex flex-col-reverse lg:flex-row justify-between pr-2 gap-2 lg:gap-10 " >
-                        <p className=" text-xs md:text-sm font-bold">{`${desc.slice(0, 200)}...`}</p>
+                        <p className=" text-xs md:text-sm font-bold opacity-[0.9]">{`${desc.slice(0, 200)}...`}</p>
                         <h3 className="font-black text-2xl lg:text-4xl uppercase lg:text-right">{title}</h3>
                     </div>
                     <div className="md:flex md:flex-row lg:flex-col font-bold hidden gap-1" >

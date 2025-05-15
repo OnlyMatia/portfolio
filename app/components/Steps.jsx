@@ -5,7 +5,7 @@ export default function Steps () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <section className="min-h-screen md:h-[40vh] w-full flex justify-center p-3 md:p-0 " style={{background:bgColor, color:txtColor}}>
+        <section className="min-h-screen md:min-h-[40vh] w-full flex justify-center p-3 md:p-0 md:py-20" style={{background:bgColor, color:txtColor}}>
             <div className="w-full md:w-[90%] flex flex-col gap-20 items-center justify-center">
                 <div className="w-full font-black text-5xl md:text-6xl lg:text-7xl uppercase pt-20 text-left">
                     <h2>Modern.</h2>
@@ -13,10 +13,10 @@ export default function Steps () {
                     <h2 >Made to impress.</h2>
                 </div>
 
-                <div className="w-full md:w-[80%] flex flex-wrap justify-around space-y-10">
+                <div className="w-full max-w-[860px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-5 lg:gap-x-2 gap-y-10">
                     {steps.map((el, i) => {
                         return (
-                            <div className="w-[170px] md:w-[250px] flex flex-col gap-3 " key={i}>
+                            <div className="w-full lg:w-[200px] flex flex-col gap-3 " key={i}>
                     <div className="w-fit inline-block group">
                         <h3 className="text-lg md:text-xl font-bold ">
                             {el.title}

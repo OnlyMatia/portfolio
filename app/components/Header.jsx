@@ -17,23 +17,11 @@ const LoaderDelay = 0.8
 export default function Header () {
     const {bgColor, txtColor} = useTheme()
 
-    useEffect(() => {
-    const setViewportHeight = () => {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    setViewportHeight();
-    window.addEventListener('resize', setViewportHeight);
-    return () => window.removeEventListener('resize', setViewportHeight);
-}, []);
-
     return (
-        <header id="header" className={` flex flex-col items-center justify-center w-full cursor-default md:gap-[2vw]`} 
+        <header id="header" className={`min-h-[100dvh] flex flex-col items-center justify-center w-full cursor-default md:gap-[2vw]`} 
         style={{
             background: bgColor,
             color: txtColor,
-            minHeight: "calc(var(--vh, 1vh) * 100)"
         }}>
         
         <section  className="flex flex-col justify-center md:justify-end items-center flex-grow text-center">
@@ -53,7 +41,7 @@ export default function Header () {
                 <Zoop text="Developer" autoAnimate />
             </motion.span>
             </h1>
-            <h3 className={`mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center text-[${txtColor}]`}>
+            <h3 className={`mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center font-bold md:font-normal text-[${txtColor}]`}>
             {"Specializing in frontend development using modern technologies and designs".split(" ").map((el, i) => {
                 return (
                 <motion.span key={i}

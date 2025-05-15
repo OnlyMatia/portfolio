@@ -52,9 +52,9 @@ export default function Loader() {
         <motion.section 
         initial={{ y: 0 }}
         animate={controls}
-        className="fixed h-[100dvh]  z-60 w-full flex justify-between flex-col md:p-15"
+        className="fixed h-[100dvh] z-60 w-full flex justify-end flex-col md:p-15"
         style={{background:bgColor, color:txtColor}}>
-            <div className="text-6xl md:text-9xl font-bold overflow-hidden p-2">
+            {/* <div className="text-6xl md:text-9xl font-bold overflow-hidden p-2">
                 <motion.h2
                 className="relative inline-block"
                 variants={container}
@@ -71,7 +71,7 @@ export default function Loader() {
                         )
                     })}
                 </motion.h2>
-            </div>
+            </div> */}
         
             <div className={`w-full justify-end text-8xl md:text-9xl flex flex-row overflow-hidden `}>
                 <Counter duration={0.5} />

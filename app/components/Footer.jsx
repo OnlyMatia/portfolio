@@ -22,18 +22,18 @@ export default function Footer (){
                     </div>
                     <div className="flex justify-between md:flex-row items-end md:w-1/2">
                         <div className="flex flex-col ">
-                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
+                        <a href="https://www.instagram.com/matiasajin/" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
                             Instagram
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
-                        </div>
-                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
+                        </a>
+                        <a href="https://github.com/OnlyMatia" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
                             GitHub
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
-                        </div>
-                        <div className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
+                        </a>
+                        <a href="https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
                             LinkedIn
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
-                        </div>
+                        </a>
                     </div>
                     <div className="text-right opacity-[0.5]">
                         Designed & 
