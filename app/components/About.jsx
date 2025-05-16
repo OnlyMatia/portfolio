@@ -15,7 +15,7 @@ export default function About () {
                     <h2 className="pb-3 inline-block uppercase opacity-[0.5]">Something about me</h2>
                 </div>
                 <div className={`text-base sm:text-lg block md:text-2xl w-full md:w-4/6 leading-[1.4] font-bold`}>
-                    <Loading value={"Hey, I'm a 24-year-old web developer from Mostar. I love playing guitar, exploring new places, watching good movies or shows, cooking and video games. Always open for new things. Currently freelancing and working on new interesting projects I cross my paths with. "} />
+                    <Loading value={"Hey, I'm a 24-year-old web developer from Mostar, creating cool and unforgettable websites, working on various projects ranging from creative to simple and functional. Keeping it fresh with big ideas and sharp execution."} />
                 </div>
             </div>
         </section>

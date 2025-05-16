@@ -40,19 +40,18 @@ export default function Labs () {
 
 
 
-function Project({title, desc, tech, image,  color, link}) {
+function Project({title, desc, tech, video, image, imageAlt, link}) {
     const {bgColor, txtColor} = useTheme()
-
 
     return (
         <div  className="w-full h-auto md:pt-20 flex justify-center items-center md:sticky top-0 p-3 md:p-0" style={{top: `calc(0% + 60px)`}}>
             
             <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
-                <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative cursor-pointer"
-                onClick={() => window.location.href = link}>
+                <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative cursor-pointer "
+                >
                     <Image 
-                        src={image || null}
-                        alt="Project preview"
+                        src={image}
+                        alt={imageAlt}
                         fill
                         className="object-cover"
                     />

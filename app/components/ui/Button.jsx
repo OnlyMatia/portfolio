@@ -27,7 +27,7 @@ export default function Button ({text, link, onClick} ) {
     }
 
     return (
-        <a href={mobileAnimation ? undefined : link} 
+        <a href={link} 
         onMouseEnter={() => sethover(true)} 
         onMouseLeave={() => sethover(false)} 
         onClick={mobileAnimation ? animateClick : onClick}>

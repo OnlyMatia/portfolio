@@ -18,7 +18,7 @@ export default function Header () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <header id="header" className={`min-h-[100dvh] flex flex-col items-center justify-center w-full cursor-default md:gap-[2vw]`} 
+        <header id="header" className={`min-h-[100dvh] flex flex-col items-center justify-center w-full cursor-default md:gap-[5vw]`} 
         style={{
             background: bgColor,
             color: txtColor,
@@ -63,7 +63,7 @@ export default function Header () {
             initial={{x: '-100%', opacity: 0}}
             animate={{x: 0, opacity: 1}}
             transition={{duration:0.6, delay: LoaderDelay}}
-            className="hidden md:block">
+            className="hidden md:block h-[20%]">
                 
                 <div className={`max-w-[280px] flex flex-col gap-5 text-[${txtColor}]`}>
                     <div className="text-4xl capitalize">
@@ -71,7 +71,7 @@ export default function Header () {
                         <h3 className="border-b py-1">Developer &</h3>
                         <h3 className="border-b py-1">Web designer</h3>
                     </div>
-                    <p className="text-sm">I'm freelance front-end developer & web designer, co-founder of xTwo.dev. Helping bold brands and ideas come to life on the web. </p>
+                    <p className="text-sm">I'm freelance front-end developer & web designer. Helping brands and ideas make an impact and come to life on the web.</p>
                     <a href="https://xtwo.dev" className="font-bold w-fit">
                         <span className="relative inline-block overflow-hidden group">
                         Explore more.

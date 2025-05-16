@@ -13,7 +13,7 @@ export default function Steps () {
                     <h2 >Made to impress.</h2>
                 </div>
 
-                <div className="w-full max-w-[860px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-5 lg:gap-x-2 gap-y-10">
+                <div className="w-full max-w-[900px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-5 lg:gap-x-10 gap-y-10 cursor-default">
                     {steps.map((el, i) => {
                         return (
                             <div className="w-full lg:w-[200px] flex flex-col gap-3 " key={i}>
