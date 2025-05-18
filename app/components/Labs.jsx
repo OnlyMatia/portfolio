@@ -29,11 +29,12 @@ export default function Labs () {
                     Featured Projects
                 </motion.h2>
             </div>
-            {projects.map((project, i) => {
+            {projects.slice(0, 3).map((project, i) => {
                 return (
                     <Project key={i} {...project} />
                 )
             })}
+            
         </section>
     )
 }
@@ -69,8 +70,10 @@ function Project({title, desc, tech, video, image, imageAlt, link}) {
                                 </span>
                             )
                         })}
+                        
                     </div>
                 </div>
+                
             </div>
         
         </div>

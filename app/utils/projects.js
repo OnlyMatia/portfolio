@@ -10,7 +10,8 @@ export const projects = [
         image: "/mirza.png",
         imageAlt: "Website Barber shop | Stranica Muškog Frizera | uniquebymirza.com",
         color: "#FC4332",
-        link: "uniquebymirza.com"
+        link: "uniquebymirza.com",
+        year: 2025
     }, {
         id: 2,
         title: "Medallion", 
@@ -20,7 +21,8 @@ export const projects = [
         image: "/cupter.png", 
         imageAlt: "E-commerce website | Online trgovina stranica | Cupter-Medallion.ba",
         color: "#b2ecfe",
-        link: "medallion.ba"
+        link: "medallion.ba",
+        year: 2024
     },{
         id: 3,
         title: "TerminBuddy", 
@@ -30,14 +32,19 @@ export const projects = [
         image: "/termin.png", 
         imageAlt: "Sports players connecting platform | Platforma za povezivanje igrača za termine | terminbuddy",
         color: "#65C999",
-        link: "terminbuddy.vercel.app"
+        link: "terminbuddy.vercel.app",
+        year: 2025
     },  
-    //{
-    //     id: 4,
-    //     title: "Future Projects.", 
-    //     desc: "In development...", 
-    //     tech: ["NextJS", "Figma", "Tailwind", "WordPress" ], 
-    //     image: "", 
-    //     color: "#fd7807"
-    // },
+    {
+        id: 4,
+        title: "GardenLux Outdoor", 
+        desc: "In development...", 
+        tech: ["Figma", "NextJS" , ], 
+        video: "",
+        image: "", 
+        imageAlt: "",
+        color: "#65C999",
+        link: " ",
+        year: 2025
+    },
 ]

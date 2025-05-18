@@ -5,9 +5,9 @@ export default function Steps () {
     const {bgColor, txtColor} = useTheme()
 
     return (
-        <section className="min-h-screen md:min-h-[40vh] w-full flex justify-center p-3 md:p-0 md:py-20" style={{background:bgColor, color:txtColor}}>
+        <section className="min-h-screen md:min-h-[100vh] w-full flex justify-center items-center p-3 md:p-0 md:py-20" style={{background:bgColor, color:txtColor}}>
             <div className="w-full md:w-[90%] flex flex-col gap-20 items-center justify-center">
-                <div className="w-full font-black text-5xl md:text-6xl lg:text-7xl uppercase pt-20 text-left">
+                <div className="w-full font-black text-5xl md:text-6xl lg:text-7xl uppercase  text-left">
                     <h2>Modern.</h2>
                     <h2 >Styled to stand out.</h2>
                     <h2 >Made to impress.</h2>
@@ -42,6 +42,7 @@ export default function Steps () {
                         </div>    
                         )
                     })}
+                    
                 </div>
 
             </div>

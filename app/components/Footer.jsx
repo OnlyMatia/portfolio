@@ -16,22 +16,22 @@ export default function Footer (){
                         Feel free to contact me for a <br/>
                         project you have in mind. <br/>
                         <a href="mailto:sajin.matija@gmail.com" className="cursor-pointer relative inline-block overflow-hidden group" >
-                            Email
+                            Email ↗
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
                         </a>
                     </div>
                     <div className="flex justify-between md:flex-row items-end md:w-1/2">
                         <div className="flex flex-col ">
                         <a href="https://www.instagram.com/matiasajin/" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
-                            Instagram
+                            Instagram ↗
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
                         </a>
                         <a href="https://github.com/OnlyMatia" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
-                            GitHub
+                            GitHub ↗
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
                         </a>
                         <a href="https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/" className=" cursor-pointer relative inline-block overflow-hidden group w-fit" >
-                            LinkedIn
+                            LinkedIn ↗
                             <span className="absolute left-0 bottom-0 h-[1px] w-0 transition-all duration-300 ease-out group-hover:w-full" style={{background:txtColor}}/>
                         </a>
                     </div>
