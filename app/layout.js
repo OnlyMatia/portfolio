@@ -83,7 +83,7 @@ export default function RootLayout({children}) {
         <meta name="twitter:card" content="/ms.ico" />
         <meta name="twitter:title" content="Web Developer | Matija Šajin" />
         <meta name="twitter:description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
-        <meta name="twitter:image" content="" />{/** slika */}
+        <meta name="twitter:image" content="/ms.ico" />{/** slika */}
       </Head>
       <body cz-shortcut-listen="true" >
         <ThemeContext.Provider value={themes[theme]}>

@@ -22,17 +22,17 @@ export default function Page () {
             <meta name="robots" content="index, follow" />
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/ms.ico" />
             <link rel="canonical" href="https://matijasajin.com/projects" />
             <meta property="og:title" content="Projects Overview" />
             <meta property="og:description" content="Overview of all finished projects and websites." />
             <meta property="og:url" content="https://matijasajin.com/projects" />
             <meta property="og:type" content="website" />
-            <meta property="og:image" itemProp="image" content="" /> {/** slika */}
-            <meta name="twitter:card" content="/Image.png" />
+            <meta property="og:image" itemProp="image" content="/ms.ico" />  
+            <meta name="twitter:card" content="/ms.ico" />
             <meta name="twitter:title" content="Projects Overview" />
             <meta name="twitter:description" content="Overview of all finished projects and websites." />
-            <meta name="twitter:image" content="" />{/** slika */}
+            <meta name="twitter:image" content="/ms.ico" /> 
         </Head>
         <section className="w-full min-h-screen flex justify-center py-5" style={{background: bgColor, color: txtColor}}>
             <div className="w-full md:w-[90%] px-3 md:px-0 flex flex-col gap-10">
@@ -86,7 +86,7 @@ function DisplayProject({ el, isOpen, onOpen }) {
                     src={el.mainImage}
                     width={1440}
                     height={1080}
-                    alt="mainImage"
+                    alt="projectImage"
                     className="block lg:hidden"
                     />
                 </div>
@@ -142,7 +142,7 @@ function DisplayProject({ el, isOpen, onOpen }) {
                         src={img}
                         width={500}
                         height={500}
-                        alt="cupter-gallery"
+                        alt="image gallery, projects images"
                         className="max-h-[150px] w-auto h-auto object-contain max-w-full"
                     />
                     </div>
