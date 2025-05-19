@@ -6,13 +6,34 @@ import { projects } from "../utils/projects"
 import Image from "next/image"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
+import Head from "next/head"
 
 
 export default function Page () {
-    const {bgColor, txtColor, hoverColor} = useTheme()
+    const {bgColor, txtColor} = useTheme()
     const [openIndex, setOpenIndex] = useState(0)
 
     return (
+        <>
+        <Head>
+            <meta name="description" content="Overview of all finished projects and websites." />
+            <title>Projects Overview</title>
+            <meta name="keywords" content="radovi,webstranice, creative websites ,web programer, web developer, dizajner, mostar webstranica, matija šajin, jeftine stranice" />
+            <meta name="robots" content="index, follow" />
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="icon" href="/favicon.ico" />
+            <link rel="canonical" href="https://matijasajin.com/projects" />
+            <meta property="og:title" content="Projects Overview" />
+            <meta property="og:description" content="Overview of all finished projects and websites." />
+            <meta property="og:url" content="https://matijasajin.com/projects" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" itemProp="image" content="" /> {/** slika */}
+            <meta name="twitter:card" content="/Image.png" />
+            <meta name="twitter:title" content="Projects Overview" />
+            <meta name="twitter:description" content="Overview of all finished projects and websites." />
+            <meta name="twitter:image" content="" />{/** slika */}
+        </Head>
         <section className="w-full min-h-screen flex justify-center py-5" style={{background: bgColor, color: txtColor}}>
             <div className="w-full md:w-[90%] px-3 md:px-0 flex flex-col gap-10">
                 <div className="flex flex-row justify-between pt-20 md:pt-[7vw] lg:pr-[15vw]">
@@ -44,6 +65,7 @@ export default function Page () {
                 <p className="font-bold">More projects coming soon!</p>
             </div>
         </section>
+        </>
     )
 }
 

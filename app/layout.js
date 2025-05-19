@@ -46,7 +46,6 @@ const themes=[
 export default function RootLayout({children}) {
     const [theme, setTheme] = useState(0)
   
-
   useEffect(() => {
     const stored = localStorage.getItem("storedTheme");
     if (stored !== null) {
@@ -67,23 +66,25 @@ export default function RootLayout({children}) {
 
   return (
     <html lang="en">
-    <head>
-        <title>Web Developer | Mostar</title>
-        <meta name="description" content="Portfolio Matija Šajin - Web Developer" />
+      <Head>
+        <meta name="description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
+        <title>Web Developer | Matija Šajin</title>
+        <meta name="keywords" content="web programer, web developer, dizajner, mostar webstranica, matija šajin, jeftine stranice" />
+        <meta name="robots" content="index, follow" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ms.ico" />
         <link rel="canonical" href="https://matijasajin.com" />
-        <meta property="og:title" content="Web Developer | Mostar" />
-        <meta property="og:description" content="Portfolio Matija Šajin - Web Developer" />
+        <meta property="og:title" content="Web Developer | Matija Šajin" />
+        <meta property="og:description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
         <meta property="og:url" content="https://matijasajin.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="" /> {/** slika */}
-        <meta name="twitter:card" content="/Image.png" />
-        <meta name="twitter:title" content="Web Developer | Mostar" />
-        <meta name="twitter:description" content="Portfolio Matija Šajin - Web Developer" />
+        <meta property="og:image" itemProp="image" content="/ms.ico" /> {/** slika */}
+        <meta name="twitter:card" content="/ms.ico" />
+        <meta name="twitter:title" content="Web Developer | Matija Šajin" />
+        <meta name="twitter:description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
         <meta name="twitter:image" content="" />{/** slika */}
-    </head>
+      </Head>
       <body cz-shortcut-listen="true" >
         <ThemeContext.Provider value={themes[theme]}>
           <ReactLenis root>
