@@ -41,8 +41,9 @@ export default function Labs () {
 
 
 
-function Project({title, desc, tech, video, image, imageAlt, link}) {
+function Project({slug, title, desc, tech, video, mainImage, imageAlt, link}) {
     const {bgColor, txtColor} = useTheme()
+    const [hover, setHover] = useState(false)
 
     return (
         <div  className="w-full h-auto md:pt-20 flex justify-center items-center md:sticky top-0 p-3 md:p-0" style={{top: `calc(0% + 60px)`}}>
@@ -51,7 +52,7 @@ function Project({title, desc, tech, video, image, imageAlt, link}) {
                 <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative cursor-pointer "
                 >
                     <Image 
-                        src={image}
+                        src={mainImage}
                         alt={imageAlt}
                         fill
                         className="object-cover"
@@ -60,7 +61,12 @@ function Project({title, desc, tech, video, image, imageAlt, link}) {
                 <div className="lg:w-1/2 w-full flex flex-col justify-between">
                     <div className="flex flex-col-reverse lg:flex-row justify-between pr-2 gap-2 lg:gap-10 " >
                         <p className=" text-xs md:text-sm font-bold opacity-[0.9]">{`${desc.slice(0, 200)}...`}</p>
-                        <h3 className="font-black text-2xl lg:text-4xl uppercase lg:text-right">{title}</h3>
+                        <h3 className="font-black text-2xl lg:text-4xl uppercase lg:text-right cursor-pointer " 
+                        onMouseEnter={()=>setHover(!hover)}
+                        onMouseLeave={() => setHover(!hover)}
+                        onClick={()=> window.open(link)}>
+                            {title}{hover && "→"}
+                        </h3>
                     </div>
                     <div className="md:flex md:flex-row lg:flex-col font-bold hidden gap-1" >
                         {tech.map((el) => {

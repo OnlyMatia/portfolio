@@ -10,7 +10,7 @@ export default function ContactAction () {
     <section className="min-h-[60vh] md:min-h-[80vh] w-full flex items-center justify-center px-3 md:p-0 md:py-20" 
     style={{background:bgColor,color:txtColor}}>
         
-        <div className=" md:max-w-[90%] lg:max-w-[80%] flex gap-2 md:gap-5 flex-col ">
+        <div className=" w-full md:max-w-[90%] flex gap-2 md:gap-5 flex-col ">
             <div className="uppercase text-[32px] sm:text-6xl  md:text-8xl lg:text-8xl font-black w-full ">
                 <h2>Need a website?</h2>
             </div>

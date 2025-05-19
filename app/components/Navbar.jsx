@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar({changeColor}){
     const [isOpen, setIsOpen] = useState(false)
     const [fade, setFade] = useState(false)
-    const links = [{name:"home", link:"#header"}, {name:"about", link:"#about"}, {name:"work", link:"/projects"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
+    const links = [{name:"home", link:"/#header"}, {name:"about", link:"#about"}, {name:"work", link:"/projects"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
     const {bgColor, txtColor, hoverColor} = useTheme()
     const pathname = usePathname();
 
@@ -39,7 +39,7 @@ export default function Navbar({changeColor}){
                     </a>
                 </div>
                 
-                <Button text="color" onClick={changeColor} classname="border-1 rounded-2xl" />
+                <Button text="set mood" onClick={changeColor} classname="border-1 rounded-2xl" />
                 
                 <div className="flex justify-end flex-1 items-center gap-2 cursor-pointer"
                 >
