@@ -31,7 +31,7 @@ export default function Navbar({changeColor}){
         initial={{y: '-100%', opacity: 0}}           
         animate={{y: 0, opacity: 1}}
         transition={{duration: pathname === '/' ? 0.5 : 0, delay: pathname === '/' ? 1 : 0}}
-        className={` fixed top-0 left-0 w-full z-50 py-3 px-2 sm:py-4 md:py-5 flex justify-center items-center backdrop-blur`} style={{color:txtColor, background: bgColor+"90"}}>           
+        className={` fixed top-0 left-0 w-full z-50 py-2 px-2 sm:py-3 md:py-3 flex justify-center items-center backdrop-blur`} style={{color:txtColor, background: bgColor+"90"}}>           
             <div className="flex items-center justify-between w-full md:w-[90%] z-50">
                 <div className="flex-1 min-w-0 truncate text-xl md:text-3xl ">
                     <a href="/#header" className="text-base md:text-xl font-black cursor-pointer flex flex-col md:flex-row tracking-tight w-fit">
