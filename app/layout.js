@@ -80,9 +80,9 @@ export default function RootLayout({children}) {
         <meta property="og:type" content="website" />
         <meta property="og:image" itemProp="image" content="" /> {/** slika */}
         <meta name="twitter:card" content="/Image.png" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/Image.png" />
+        <meta name="twitter:title" content="Web Developer | Mostar" />
+        <meta name="twitter:description" content="Portfolio Matija Šajin - Web Developer" />
+        <meta name="twitter:image" content="" />{/** slika */}
     </head>
       <body cz-shortcut-listen="true" >
         <ThemeContext.Provider value={themes[theme]}>
