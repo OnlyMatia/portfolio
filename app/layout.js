@@ -7,6 +7,7 @@ import { ReactLenis } from "./utils/lenis"
 import { ThemeContext } from "./components/ThemeContext";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next"
+import Head from "next/head";
 
 const themes=[
     {
@@ -66,6 +67,23 @@ export default function RootLayout({children}) {
 
   return (
     <html lang="en">
+    <head>
+        <title>Web Developer | Mostar</title>
+        <meta name="description" content="Portfolio Matija Šajin - Web Developer" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://matijasajin.com" />
+        <meta property="og:title" content="Web Developer | Mostar" />
+        <meta property="og:description" content="Portfolio Matija Šajin - Web Developer" />
+        <meta property="og:url" content="https://matijasajin.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" itemProp="image" content="" /> {/** slika */}
+        <meta name="twitter:card" content="/Image.png" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content="/Image.png" />
+    </head>
       <body cz-shortcut-listen="true" >
         <ThemeContext.Provider value={themes[theme]}>
           <ReactLenis root>
