@@ -6,6 +6,7 @@ import "./globals.css";
 import { ReactLenis } from "./utils/lenis"
 import { ThemeContext } from "./components/ThemeContext";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const themes=[
     {
@@ -73,6 +74,7 @@ export default function RootLayout({children}) {
           <Footer />
           </ReactLenis>
         </ThemeContext.Provider>
+        <Analytics />
       </body>
     </html>
   );
