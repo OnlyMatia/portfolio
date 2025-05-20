@@ -17,7 +17,7 @@ export default function ProjectsClient () {
         <section className="w-full min-h-screen flex justify-center py-5" style={{background: bgColor, color: txtColor}}>
             <div className="w-full md:w-[90%] px-3 md:px-0 flex flex-col gap-10">
                 <div className="flex flex-row justify-between pt-20 md:pt-[7vw] lg:pr-[15vw]">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase ">Projects</h2>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase ">Projects</h1>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase opacity-[0.6]">{projects.length}</h2>
                 </div>
                 <div className="font-bold text-sm lg:text-base lg:pr-[50%]">

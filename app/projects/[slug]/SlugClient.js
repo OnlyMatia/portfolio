@@ -24,6 +24,11 @@ export default function SlugClient() {
                     </div>
 
                     <div className="border-b grid grid-cols-6 py-2 font-bold items-start">
+                        <h3 className="opacity-[0.7] col-span-2">Project</h3>
+                        <h1 className="col-start-4 col-span-3">{project.title}</h1>
+                    </div>
+
+                    <div className="border-b grid grid-cols-6 py-2 font-bold items-start">
                         <h3 className="opacity-[0.7] col-span-2">Client</h3>
                         <h2 className="col-start-4 col-span-3">{project.client}</h2>
                     </div>

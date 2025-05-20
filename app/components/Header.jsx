@@ -41,7 +41,7 @@ export default function Header () {
                 <Zoop text="Developer" autoAnimate />
             </motion.span>
             </h1>
-            <h3 className={`mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center font-bold md:font-normal text-[${txtColor}]`}>
+            <h2 className={`mt-2 text-sm sm:text-lg px-4 flex flex-wrap justify-center font-bold md:font-normal text-[${txtColor}]`}>
             {"Specializing in frontend development using modern technologies and designs".split(" ").map((el, i) => {
                 return (
                 <motion.span key={i}
@@ -53,7 +53,7 @@ export default function Header () {
                 </motion.span>
                 )
             })}
-            </h3>
+            </h2>
 
             
         </section>

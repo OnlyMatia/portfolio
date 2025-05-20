@@ -22,7 +22,7 @@ export default function ContactAction () {
                     <Button text="Contact →" link="mailto:sajin.matija@gmail.com" classname="border " />
                 </div>
                 <div className="w-1/2  flex flex-col gap-5 text-justify">
-                    <h2 className="uppercase text-3xl md:text-6xl lg:text-7xl font-black md:font-bold">Say Hello!</h2>
+                    <h3 className="uppercase text-3xl md:text-6xl lg:text-7xl font-black md:font-bold">Say Hello!</h3>
                     <p className="w-full md:w-[80%] lg:w-[70%] text-[12px] sm:text-sm lg:text-base font-bold opacity-[0.9]">
                         Curious about why a website matters, how my process works, or how it can help grow your brand or business? Feel free to reach out I'm always happy to answer questions.
                     </p>
