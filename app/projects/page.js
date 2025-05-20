@@ -11,8 +11,12 @@ export const metadata = {
         'web development',
         'web dizajn',
         'nextjs projekti',
+        'web projects'
     ],
     robots: 'index, follow',
+    icons: {
+        icon: '/favico.ico',
+    },
     alternates: {
         canonical: 'https://matijasajin.com/projects',
     },

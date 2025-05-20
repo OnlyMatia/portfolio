@@ -15,7 +15,10 @@ export async function generateMetadata({ params }) {
     return {
         title: `${project.title} | Project Details`,
         description: `Detailed images, process and used techonology for ${project.title}, made ${project.year}.`,
-        keywords: [project.title, ...project.tech, 'matija šajin', 'web development', 'portfolio'],
+        keywords: [project.title, ...project.tech, 'matija šajin', 'web development', 'portfolio', "web project"],
+        icons: {
+            icon: '/favico.ico',
+        },
         alternates: {
         canonical: `https://matijasajin.com/projects/${project.slug}`,
         },
