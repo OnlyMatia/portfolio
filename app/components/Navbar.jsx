@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 export default function Navbar({changeColor}){
     const [isOpen, setIsOpen] = useState(false)
     const [fade, setFade] = useState(false)
-    const links = [{name:"home", link:"/#header"}, {name:"about", link:"#about"}, {name:"work", link:"/projects"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
+    const links = [{name:"home", link:"/#header"}, {name:"about", link:"/#about"}, {name:"work", link:"/projects"}, {name:"contact", link:"mailto:sajin.matija@gmail.com"}]
     const {bgColor, txtColor, hoverColor} = useTheme()
     const pathname = usePathname();
 
@@ -39,14 +39,14 @@ export default function Navbar({changeColor}){
                     </a>
                 </div>
                 
-                <Button text="set mood" onClick={changeColor} classname="border-1 rounded-2xl" />
+                <Button text="scene" onClick={changeColor} classname="border-1 " />
                 
                 <div className="flex justify-end flex-1 items-center gap-2 cursor-pointer"
                 >
                 <p className=" text-xs md:text-sm z-50 " onClick={()=> {
                             setFade(!fade) 
                             setIsOpen(!isOpen)}}>{isOpen ? "Close" : "Menu"}</p>
-                    <button
+                    <div
                         className={`flex flex-col justify-center gap-1.5 py-3 px-auto rounded cursor-pointer`}
                         onClick={()=> {
                             setFade(!fade) 
@@ -55,7 +55,7 @@ export default function Navbar({changeColor}){
                         
                         <span className={`block w-5 md:w-10 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "rotate-45 translate-y-1" : ""}`} style={{background:txtColor}}></span>
                         <span className={`block  w-5 md:w-10 h-0.5 rounded transition-transform duration-200 ease-in-out ${isOpen ? "-rotate-45 -translate-y-1" : ""}`} style={{background:txtColor}}></span>
-                    </button>
+                    </div>
                 </div>
             </div>
 

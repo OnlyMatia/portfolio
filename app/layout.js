@@ -7,7 +7,7 @@ import { ReactLenis } from "./utils/lenis"
 import { ThemeContext } from "./components/ThemeContext";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next"
-import Head from "next/head";
+import Script from "next/script";
 
 const themes=[
     {
@@ -66,25 +66,30 @@ export default function RootLayout({children}) {
 
   return (
     <html lang="en">
-      <Head>
-        <meta name="description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
-        <title>Web Developer | Matija Šajin</title>
-        <meta name="keywords" content="web programer, web developer, dizajner, mostar webstranica, matija šajin, jeftine stranice" />
-        <meta name="robots" content="index, follow" />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/ms.ico" />
-        <link rel="canonical" href="https://matijasajin.com" />
-        <meta property="og:title" content="Web Developer | Matija Šajin" />
-        <meta property="og:description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
-        <meta property="og:url" content="https://matijasajin.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" itemProp="image" content="/ms.ico" /> {/** slika */}
-        <meta name="twitter:card" content="/ms.ico" />
-        <meta name="twitter:title" content="Web Developer | Matija Šajin" />
-        <meta name="twitter:description" content="Portfolio Matija Šajin - Web Developer & Web Designer" />
-        <meta name="twitter:image" content="/ms.ico" />{/** slika */}
-      </Head>
+      <head>
+        <Script id="ld-json" type="application/ld+json" strategy="beforeInteractive">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Matija Šajin Portfolio",
+            "jobTitle":"Web Developer",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rafaela Bobana b.b.",
+              "postalCode": "88000",
+              "addressLocality": "Mostar",
+              "addressCountry": "BA"
+            },
+            "telephone": "+38763568408",
+            "url": "https://matijasajin.com",
+            "email":"mailto:sajin.matija@gmail.com",
+            "sameAs":[
+            "https://www.linkedin.com/in/matija-%C5%A1ajin-732696251/",
+            "https://github.com/OnlyMatia"
+            ]
+          }`}
+        </Script>
+      </head>
       <body cz-shortcut-listen="true" >
         <ThemeContext.Provider value={themes[theme]}>
           <ReactLenis root>

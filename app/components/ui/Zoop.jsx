@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 
 
-export default function Zoop ({text, href, autoAnimate}) {
+export default function Zoop ({text, autoAnimate}) {
     const controls = useAnimation();
 
     useEffect(() => {
@@ -32,13 +32,13 @@ export default function Zoop ({text, href, autoAnimate}) {
     }, [controls, autoAnimate]);
     
     return (
-        <motion.a 
+        <motion.div 
         initial="initial"
         whileHover="hovered"
         animate={controls}
         transition={{staggerChildren: 0.2}}
         className="relative block overflow-hidden whitespace-nowrap "
-        href={href}>
+        >
 
             <div>
                 {text.split("").map((el, i) => {
@@ -77,6 +77,6 @@ export default function Zoop ({text, href, autoAnimate}) {
                 })}
             </div>
 
-        </motion.a>
+        </motion.div>
     )
 }

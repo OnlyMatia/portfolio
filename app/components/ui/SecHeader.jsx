@@ -1,5 +1,6 @@
-import { useTheme } from "../ThemeContext"
+"use client"
 
+import { useTheme } from "../ThemeContext"
 
 export default function SecHeader () {
     const {bgColor, txtColor} = useTheme()

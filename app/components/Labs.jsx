@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import {  useRef, useState } from "react"
 import { projects } from "../utils/projects"
-import { motion, useInView } from "framer-motion"
+import { AnimatePresence, motion, useInView } from "framer-motion"
 import { useTheme } from "./ThemeContext"
 import Image from "next/image"
 
@@ -50,7 +50,7 @@ function Project({slug, title, desc, tech, video, mainImage, imageAlt, link}) {
             
             <div className="border-t pt-5 w-full md:w-[90%] flex flex-col md:flex-row gap-5" style={{background:bgColor}}>
                 <div className="border p-2 lg:p-5 lg:w-1/2 h-[60vw] md:h-[40vw] lg:h-[30vw] w-full relative cursor-pointer "
-                >
+                onClick={() => window.location.href = `/projects/${slug}`}>
                     <Image 
                         src={mainImage}
                         alt={imageAlt}
@@ -62,10 +62,15 @@ function Project({slug, title, desc, tech, video, mainImage, imageAlt, link}) {
                     <div className="flex flex-col-reverse lg:flex-row justify-between pr-2 gap-2 lg:gap-10 " >
                         <p className=" text-xs md:text-sm font-bold opacity-[0.9]">{`${desc.slice(0, 200)}...`}</p>
                         <h3 className="font-black text-2xl lg:text-4xl uppercase lg:text-right cursor-pointer " 
-                        onMouseEnter={()=>setHover(!hover)}
-                        onMouseLeave={() => setHover(!hover)}
+                        onMouseEnter={()=>setHover(true)}
+                        onMouseLeave={() => setHover(false)}
                         onClick={()=> window.open(link)}>
-                            {title}{hover && "→"}
+                            {title}
+                            {hover && (
+                                <span>
+                                    →
+                                </span>
+                            )}
                         </h3>
                     </div>
                     <div className="md:flex md:flex-row lg:flex-col font-bold hidden gap-1" >

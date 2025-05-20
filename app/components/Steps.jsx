@@ -1,3 +1,4 @@
+"use client"
 import { useTheme } from "./ThemeContext"
 import { steps } from "../utils/steps"
 

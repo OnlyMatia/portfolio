@@ -19,7 +19,7 @@ export default function ContactAction () {
                     <p className="w-[90%] md:w-[80%] lg:w-[70%] text-[12px]  sm:text-sm lg:text-base text-justify font-bold opacity-[0.9]">
                         Whether you're launching a business, building a new brand, or refreshing your site, I'm here to help. Share your idea, and we'll discuss it in person or over a call. 
                     </p>
-                    <Button text="Contact →" link="mailto:sajin.matija@gmail.com" />
+                    <Button text="Contact →" link="mailto:sajin.matija@gmail.com" classname="border " />
                 </div>
                 <div className="w-1/2  flex flex-col gap-5 text-justify">
                     <h2 className="uppercase text-3xl md:text-6xl lg:text-7xl font-black md:font-bold">Say Hello!</h2>
