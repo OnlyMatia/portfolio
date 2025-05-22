@@ -8,6 +8,7 @@ import { ThemeContext } from "./components/ThemeContext";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const themes=[
     {
@@ -99,6 +100,7 @@ export default function RootLayout({children}) {
           </ReactLenis>
         </ThemeContext.Provider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
